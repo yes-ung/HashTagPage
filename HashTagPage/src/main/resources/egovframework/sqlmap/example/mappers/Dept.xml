@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="egovframework.example.dept.service.impl.DeptMapper">
+   
+   <select id="selectDeptList"
+         parameterType="Criteria"
+         resultType="DeptVO"
+   >
+      SELECT * FROM TB_DEPT
+      WHERE DNAME LIKE '%' || #{searchKeyword} ||'%'
+      OFFSET #{firstIndex} ROWS
+      FETCH NEXT #{pageUnit} ROWS ONLY
+   </select>
+   
+   <!-- id="메소드명",parameterType="매개변수자료형",resultType="return자료형"  -->
+   <select id="selectDeptListTotCnt"
+         parameterType="Criteria"
+         resultType="int"
+   >
+      SELECT COUNT(*) FROM TB_DEPT
+      WHERE DNAME LIKE '%' || #{searchKeyword} ||'%'      
+   </select>
+   
+   <insert id="insert"
+         parameterType="DeptVO"
+   >
+      INSERT INTO TB_DEPT(DNO,DNAME,LOC
+                          ,INSERT_TIME)
+      VALUES(SQ_DEPT.NEXTVAL,#{dname},#{loc}
+                          ,TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS'))      
+   </insert>
+   
+   <select id="selectDept"
+         parameterType="int"
+         resultType="DeptVO">
+         select * from tb_dept
+         where dno= #{dno}                    
+   </select>
+   
+   <update id="update"
+         parameterType="DeptVO">
+     update tb_dept
+     set dname=#{dname},
+         loc=#{loc},
+         UPDATE_TIME=TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
+     where dno=#{dno}
+   </update>
+   
+    <delete id="delete"
+         parameterType="DeptVO">
+         delete tb_dept
+         where dno=#{dno}
+   
+   </delete>
+   
+
+</mapper>
