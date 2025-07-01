@@ -15,7 +15,7 @@
 <jsp:include page="/common/header.jsp" />
     <div class="page mt5">
    다른 컴퓨터 서버 접속 가능한지 테스트 <br>
-   메인페이지
+   메인페이지 안녕
 </div>
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
