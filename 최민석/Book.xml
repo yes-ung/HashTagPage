@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="egovframework.example.book.service.impl.BookMapper">
+   <!-- id="메소드명",parameterType="매개변수자료형",resultType="return자료형"  -->
+    <select id="selectTopBookList"
+         parameterType="Criteria"
+         resultType="egovframework.example.book.service.BookVO"
+   >
+      SELECT * FROM "Book"
+      WHERE "book_title" LIKE '%' || #{searchKeyword} ||'%'
+      OFFSET #{firstIndex} ROWS
+      FETCH NEXT #{pageUnit} ROWS ONLY
+   </select>   
+   <select id="selectBookTrendList"
+         parameterType="Criteria"
+         resultType="egovframework.example.book.service.BookVO"
+   >
+      SELECT * FROM "Book"
+      WHERE "book_title" LIKE '%' || #{searchKeyword} ||'%'
+      OFFSET #{firstIndex} ROWS
+      FETCH NEXT #{pageUnit} ROWS ONLY
+   </select>  
+   <!-- id="메소드명" parameterType="매개변수자료형" resultType="return자료형" -->
+	<select id="selectBookListTotCnt" parameterType="Criteria"
+		resultType="int">
+		--테이블 총 개수
+		select count(*) from "Book"
+		WHERE "book_title" LIKE '%'
+		||
+		#{searchKeyword} ||'%'
+	</select> 
+	<insert id="insert" parameterType="egovframework.example.book.service.BookVO">
+INSERT INTO "Book"("uuid","category_id","type_id",
+                  "author_id","publisher_id","book_order","book_title","book_volume","book_description","book_price","book_created_at","novel_text","rank","trend","five_star_review","view_count","thumbnail_img","toon_img","book_created_at"})
+      VALUES(#{uuid},#{categoryId},#{typeId},#{authorId},#{publisherID},#{bookOrder},#{bookTitle},#{bookVolume},#{bookDescription},#{bookPrice},#{novel_text},#{rank},#{trend},#{fiveStarReview},#{viewCount},
+      #{thumbnailImg},#{toonImg},TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS'))
+	</insert>
+	<select id="selectBook"
+	parameterType="String"
+	resultType="egovframework.example.book.service.BookVO">
+		select * from "Book"
+		WHERE UUID=#{uuid}
+	</select>
+	<select id="selectTop10Books"  parameterType="Criteria" resultType="egovframework.example.book.service.BookVO">
+    SELECT * FROM "Book"
+    WHERE "rank" BETWEEN 1 AND 10
+    ORDER BY "rank" ASC
+</select>
+	
+   </mapper>
