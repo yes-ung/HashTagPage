@@ -1,0 +1,126 @@
+.top-banner {
+  margin: 1rem 0;
+}
+
+.top-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+.card {
+  position: relative;
+  text-align: center;
+  background: var(--white);
+  border-radius: 11px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+}
+
+.card img {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.badge-container {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  color: var(--white);
+  border-radius: 4px;
+}
+.badge.ponly {
+  background-color: var(--primary-blue1);
+}
+.badge.up {
+  background-color: var(--secondary-orange1);
+}
+.badge.free {
+  background-color: var(--primary-blue3);
+}
+
+.rank-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.rank-cardinner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100px;
+    height: 150px;
+}
+.rank-cardinner img {
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.ranking-list {
+    display: flex;
+    flex-direction: column;
+}
+.ranking-list li {
+  gap: 0.8rem;
+  align-items: center;
+}
+.rank-num {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.novel-swiper .swiper-slide {
+  width: auto; /* 혹은 아래처럼 고정 px도 가능 */
+  min-width: 280px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 50%;  /* 가운데 위치 */
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: var(--bg-subtle);  /* 회색으로 덜 튀게 */
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
