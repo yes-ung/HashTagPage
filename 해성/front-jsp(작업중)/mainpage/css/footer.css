@@ -1,0 +1,66 @@
+footer {
+  background-color: #4368a7; /* 메인 블루 계열 컬러로 */
+  color: white;
+  font-size: 14px;
+}
+
+.main-footer {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* TODO: 태블릿 */
+@media screen and (min-width: 768px) {
+  .page {
+    width: 80vw;
+  }
+
+  .main-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-links {
+    order: 1;
+  }
+
+  .footer-copy {
+    order: 2;
+  }
+}
+
+/* TODO: pc */
+@media screen and (min-width: 1024px) {
+  .page {
+    width: 60vw;
+  }
+}
