@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/page/nohyun/css/00_style.css" />
+    <link rel="stylesheet" href="/page/nohyun/css/mypage1.css" />
+    <link rel="stylesheet" href="/page/nohyun/css/footer.css" />
+    <link rel="stylesheet" href="/page/nohyun/css/header.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <div id="header"></div>
+      <main>
+        <div class="mypage-container">
+          <div class="border-box">
+            <ul class="sidebar">
+              <li><a href="#">내 정보</a></li>
+              <li><a href="#">보관함</a></li>
+              <li><a href="#">구매내역</a></li>
+              <li><a href="#">내가 쓴글</a></li>
+              <li><a href="#">개인문의</a></li>
+            </ul>
+          </div>
+
+          <div class="main pl5">
+            <div class="mypage-body">
+              <h1>마이페이지</h1>
+              <div class="mypage-main">
+                <h4>내 정보</h4>
+                <div class="mypage-wrapper">
+                  <div class="img">
+                    <img src="https://placehold.co/200x250" alt="빈이미지" />
+                    <div class="profile-img-button">
+                      <button>등록</button>
+                      <button>삭제</button>
+                    </div>
+                  </div>
+                  <div class="mypage-content">
+                    <span class="mr5"> 아이디 </span>
+                    <input type="name" />
+                    <p></p>
+                    <span class="mr5"> 닉네임 </span>
+                    <input type="name" />
+                    <button>변경하기</button>
+                    <p></p>
+                    <span class="mr5">현재 비밀번호 </span
+                    ><input type="password" />
+                    <p></p>
+                    <span class="mr5"> 변경 비밀번호 </span>
+                    <input type="password" placeholder="변경 할 비밀번호" />
+                    <p></p>
+                    <span class="mr5"> 변경 비밀번호 </span>
+                    <input type="password" placeholder="재확인" />
+                    <button>변경하기</button>
+                    <p></p>
+                    <span class="mr5"> 이메일 </span>
+                    <input type="name" />
+                    <p></p>
+                    <span class="mr5"> 핸드폰 </span>
+                    <input type="name" />
+                    <p></p>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="bye">
+              <h5><a href="#">회원탈퇴</a></h5>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div id="footer"></div>
+    </div>
+    <!-- 헤더 햄버거 -->
+    <script>
+      function setHeaderToggleEvent() {
+        document
+          .querySelector(".mobile-toggle")
+          ?.addEventListener("click", function () {
+            document.querySelector(".mobile-nav")?.classList.toggle("active");
+          });
+
+        document
+          .querySelector(".pc-toggle")
+          ?.addEventListener("click", function () {
+            document.querySelector(".pc-nav")?.classList.toggle("active");
+          });
+      }
+
+      // 공통 헤더 불러오기
+      fetch("./header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          setHeaderToggleEvent();
+        });
+
+      // 공통 푸터 불러오기
+      fetch("./footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

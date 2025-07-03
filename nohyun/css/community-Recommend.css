@@ -1,0 +1,82 @@
+body {
+  background-color: #F8F9FA;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.community-Recommend-container {
+  background-color: #F8F9FA;
+  margin-top: 3rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.community-Recommend-sidebar li {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: small;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+
+.community-Recommend-border-box {
+  width: 10vw;
+  color: var(--dark);
+  padding-top: 0.5rem;
+}
+
+.main {
+  width: 60vw;
+  border-left: 0.10rem solid #a8a8a8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.community-Recommend-body {
+  margin-left: 6rem;
+  
+}
+
+
+
+.community-Recommend-content {
+  padding-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}   
+
+
+.community-Recommend-card {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.community-Recommend-card img {
+  width: 150px;
+  height: 180px;
+  display: block;
+}
+
+.star-rating {
+  display: flex;
+  margin-top: 0.1rem;
+  font-size: 1rem;
+
+}
+
+.star {
+  color: tomato;
+}
+
+.score {
+  margin-left: 0.3rem;
+  color: #555;
+  font-size: 0.95rem;
+}
