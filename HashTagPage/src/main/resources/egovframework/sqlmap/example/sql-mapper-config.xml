@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!-- sql 옵션: DB(컬럼:언더바표현식)=자바(필드:카멜표현식), 
+        sql문에 null 값을 허용 예) insert ~ value(null) 허용 -->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="jdbcTypeForNull" value="NULL"/>
+    </settings>	
+
+<!-- 마이바티스 별명 지정하는 곳 -->
+<!-- 사용법: typeAlias type="풀클래스명" alias="별명" -->
+    <typeAliases>
+        <typeAlias type="teamproject.common.Criteria" alias="Criteria"/>
+        <typeAlias type="teamproject.auth.service.MemberVO" alias="MemberVO"/>
+    
+		<typeAlias alias="egovMap" type="org.egovframe.rte.psl.dataaccess.util.EgovMap"/>
+		<typeAlias alias="searchVO" type="egovframework.example.sample.service.SampleDefaultVO"/>
+		<typeAlias alias="sampleVO" type="egovframework.example.sample.service.SampleVO"/>
+    </typeAliases>
+</configuration>
