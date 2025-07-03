@@ -1,0 +1,86 @@
+body {
+  background-color: #F8F9FA;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.mycasezzim-container {
+  background-color: #F8F9FA;
+  margin-top: 3rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.mycasezzim-sidebar li {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: small;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+
+.mycasezzim-border-box {
+  width: 10vw;
+  color: var(--dark);
+  padding-top: 0.5rem;
+}
+
+.main {
+  width: 60vw;
+  border-left: 0.10rem solid #a8a8a8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mycasezzim-body {
+  margin-left: 6rem;
+  
+}
+
+.mycasezzim-wrapper h4 {
+  border-bottom: 0.1rem solid #a8a8a8;
+  padding: 6rem 0 1rem 0;
+}
+
+
+.mycasezzim-content {
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}   
+
+
+.zzim-card {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.zzim-card img {
+  width: 150px;
+  height: 180px;
+  display: block;
+}
+
+.star-rating {
+  display: flex;
+  margin-top: 0.1rem;
+  font-size: 1rem;
+
+}
+
+.star {
+  color: tomato;
+}
+
+.score {
+  margin-left: 0.3rem;
+  color: #555;
+  font-size: 0.95rem;
+}
