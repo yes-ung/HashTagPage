@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/00_style.css" />
+    <link rel="stylesheet" href="/CSS/header.css" />
+    <link rel="stylesheet" href="/CSS/footer.css" />
+    <link rel="stylesheet" href="/CSS/write.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div id="header"></div>
+      <main>
+        <div class="container">
+          <img
+            src="//images.novelpia.com/imagebox/cover/42c6be6bc7c4972e920a3eb992fc6f32_200938_ori.wimg"
+            class="cover_style"
+          />
+          <div>
+            <h2>[블루아카이브] 가짜 선생.</h2>
+            <p><strong>작가명:</strong> 리트uwu</p>
+            <p><strong>연재:</strong> 월/화/수/목/금</p>
+            <p class="stats">조회 46,768 | 추천 4,167</p>
+            <p class="stats">인생픽 공개전</p>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span>#패러디</span>
+          <span>#판타지</span>
+          <span>#드라마</span>
+          <span>#로맨스</span>
+          <br />
+          <span>#피폐</span>
+          <span>#시리어스</span>
+          <span>#구원</span>
+          <span>#오해</span>
+        </div>
+
+        <div class="stats">
+          ❤️ 선호 368 &nbsp; 🔔 알람 75 &nbsp; 🔁 회차 91회차
+        </div>
+        <br /><br />
+
+        <div class="quote">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+        <div class="comment-section">
+          <!-- 상단 좋아요 및 버튼 -->
+          <div class="likes">
+            <button>❤️ 82</button>
+            <a href="#"><button class="webtoon_site">작품 보러가기</button> </a>
+          </div>
+
+          <!-- 댓글 개수 -->
+          <div><strong>댓글 9</strong></div>
+
+          <!-- 댓글 목록 -->
+          <div class="comment">
+            <div class="comment-header">
+              <span><strong>메론향</strong> 2025.06.28 02:17</span>
+            </div>
+            <div class="comment-body">
+              진짜 재밌게 보셨나보네 초장문 추천글 ㅋㅋ
+            </div>
+            <div class="comment-footer">
+              <span>답댓글</span>
+              <span>👍 2</span>
+              <span>👎 1</span>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="comment-header">
+              <span><strong>한심한민서</strong> 2025.06.28 02:55</span>
+            </div>
+            <div class="comment-body">카</div>
+            <div class="comment-footer">
+              <span>답댓글</span>
+              <span>👍 2</span>
+              <span>👎 1</span>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="comment-header">
+              <span><strong>qwetyu</strong> 2025.06.29 10:04</span>
+            </div>
+            <div class="comment-body">
+              좋아요가 이렇게 많은데 댓글수가 이리 적을수있나?
+            </div>
+            <div class="comment-footer">
+              <span>답댓글</span>
+              <span>👍 2</span>
+              <span>👎 2</span>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="comment-header">
+              <span><strong>힘들78</strong> 2025.06.29 10:21</span>
+            </div>
+            <div class="comment-body">
+              역시 인기작가라서 그런가 추천 글도 엄.청.나.네. <br />
+              추천작은 아직 보지 않았지만 추천글은 추천합니다. <br />
+              <br />
+              근데... 맞죠?
+            </div>
+            <div class="comment-footer">
+              <span>답댓글</span>
+              <span>👍 0</span>
+              <span>👎 0</span>
+            </div>
+            <div class="comment-box">
+              <textarea
+                id="comment"
+                placeholder="댓글을 작성하세요.."
+                maxlength="3000"
+                oninput="updateCount()"
+              ></textarea>
+              <div class="comment-footer">
+                <span id="charCount">0 / 3000</span>
+              </div>
+              <button class="submit-btn">등록</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div id="footer"></div>
+    </div>
+
+    <!-- 헤더 햄버거 -->
+    <script>
+      // 댓글입력 기능
+      function updateCount() {
+        const textarea = document.getElementById("comment");
+        const charCount = document.getElementById("charCount");
+        charCount.textContent = `${textarea.value.length} / 3000`;
+      }
+
+      function setHeaderToggleEvent() {
+        document
+          .querySelector(".mobile-toggle")
+          ?.addEventListener("click", function () {
+            document.querySelector(".mobile-nav")?.classList.toggle("active");
+          });
+
+        document
+          .querySelector(".pc-toggle")
+          ?.addEventListener("click", function () {
+            document.querySelector(".pc-nav")?.classList.toggle("active");
+          });
+      }
+
+      // 공통 헤더 불러오기
+      fetch("./header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          setHeaderToggleEvent();
+        });
+
+      // 공통 푸터 불러오기
+      fetch("./footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
