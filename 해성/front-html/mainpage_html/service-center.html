@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 결과 | #PAGE</title>
+    <link rel="stylesheet" href="./css/00_style.css" />
+    <link rel="stylesheet" href="css/service-center.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/simple-header.css">
+  </head>
+  <body>
+    <div class="page">
+      <!-- 헤더 -->
+      <div id="simple-header"></div>
+
+      <!-- 본문 -->
+      <main class="service-center-page">
+        <section class="faq-hero pt4 pb4 pl5 pr5">
+          <h1>검색으로 문제를 빠르게 해결하세요 #</h1>
+          <div class="faq-search-bar">
+            <input type="text" placeholder="궁금한 내용을 검색해보세요 #" />
+            <button class="btn-search">🔍</button>
+          </div>
+            <div class="faq-search-text mt2">
+              <a href="#" class="float-text mr1">#사이트뭐이럼</a>
+              <a href="#" class="float-text mr1">#계정</a>
+              <a href="#" class="float-text mr1">#비밀번호털림</a>
+              <a href="#" class="float-text mr1">#앱안열림</a>
+              <a href="#" class="float-text">#좀비</a>
+            </div>
+        </section>
+
+          <!-- 공지사항 -->
+        <div class="faq-content-row">
+        <section class="notice-section">
+          <h2 class="section-title"><a href="#">📢 공지사항</a></h2>
+            <!-- 최근 공지 사항 출력 4~5개 제한 -->
+          <ul class="notice-list">
+            <li><a href="#">[안내] 2025년 6월 N페이 이벤트 당첨자 안내</a></li>
+        
+            <li><a href="#">[공지] 개인정보 처리방침 개정 안내</a></li>
+            <li><a href="#">[공지] 고객센터 및 AS 센터 휴무 안내</a></li>
+          </ul>
+        </section>
+
+          <!-- 자주 묻는 질문 -->
+        <section class="faq-category">
+          <h2 class="section-title"><a href="#">📂 자주 묻는 질문</a></h2>
+          <div class="faq-category-buttons">
+            <a href="#" class="faq-btn">앱/웹 이용</a>
+            <a href="#" class="faq-btn">콘텐츠 이용</a>
+            <a href="#" class="faq-btn">결제/환불</a>
+            <a href="#" class="faq-btn">계정/보안</a>
+          </div>
+            <!-- FAQ 출력 4~5개 제한 -->
+          <ul class="notice-list">
+            <li><a href="#">웹사이트 바로가기 생성 방법</a></li>
+        
+            <li><a href="#">오프라인에서도 볼 수 있나요?</a></li>
+            <li><a href="#">해킹당했어요</a></li>
+          </ul>
+        </section>
+        </div>
+
+      </main>
+
+      <!-- 푸터 -->
+      <div id="footer"></div>
+    </div>
+
+    <!-- <script>
+  const tabButtons = document.querySelectorAll('.search-tabs button');
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener('click', function () {
+      // 1. 모든 버튼에서 active 제거
+      tabButtons.forEach((b) => b.classList.remove('active'));
+
+      // 2. 클릭한 버튼에 active 추가
+      this.classList.add('active');
+    });
+  });
+</script> -->
+
+<script>
+      // 공통 헤더 불러오기
+      fetch("./simple-header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("simple-header").innerHTML = data;
+          setHeaderToggleEvent();
+        });
+
+    
+      // 공통 푸터 불러오기
+      fetch("./footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

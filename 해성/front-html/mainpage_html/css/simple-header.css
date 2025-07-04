@@ -1,0 +1,19 @@
+/* 헤더 */
+
+.simple-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-logo img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.a-rounded-al {
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    color: var(--primary-blue1);
+}

@@ -1,5 +1,5 @@
 
-/*  */
+/* 공통 컬러 */
 :root {
     --sub1: #212529;
     --sub2: #6C757D;
@@ -29,11 +29,31 @@
 
 }
 
+/* 공통 레이아웃 */
+
 * {margin: 0;padding: 0;box-sizing: border-box;}
 
 .page {width:97vw; margin: 0 auto;}
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* 여기서 남는 공간 다 차지하게 함 */
+}
+
 body {color: var(--dark); font-family: "Montserrat","Noto Sans KR", sans-serif;line-height: 1.6;}
+
+
+/* li, a, button 스타일 */
 
 li {list-style-type: none;}
 
@@ -137,6 +157,7 @@ button.btn-rounded:hover {
   border: 2px solid var(--primary-blue1);
 }
 
+
 /* 공통 여백 정하기 */
 /* 마진 위 5개 */
 .mt0 {margin-top:0.25rem !important;}
@@ -203,6 +224,8 @@ button.btn-rounded:hover {
 .w25 {width:25% !important;}
 
 
+/* 아래는 가능한 page 설정만 참고할 것 */
+
 /* 글자 중앙정렬 */
 .tcenter{text-align:center !important;}
 /* 박스 중앙정렬 */
@@ -225,6 +248,7 @@ button.btn-rounded:hover {
     /* 박스 3개 배치 */
     .col3 {width:32% !important;}
 }
+
 /* TODO: pc */
 @media screen and (min-width: 1024px){
     .page {width: 60vw;}

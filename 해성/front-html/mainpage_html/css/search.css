@@ -17,7 +17,7 @@ header {
 }
 
 .search-page {
-  max-width: 768px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -193,4 +193,48 @@ a.float-text:hover {
   font-size: 0.9rem;
   color: #444;
   line-height: 1.4;
+}
+
+@media screen and (min-width: 768px) {
+  .search-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--white);
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.nowtag {
+  flex: 1;
+}
+
+  .search-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .tag-bar{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-tag {
+    flex-wrap: wrap;    
+  }
+
+  .search-tag .btn-text-like {
+    align-items: flex-end;
+  }
+
 }

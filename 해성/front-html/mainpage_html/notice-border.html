@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notice-border</title>
+    <link rel="stylesheet" href="./css/00_style.css" />
+    <link rel="stylesheet" href="./css/notice-border.css" />
+    <link rel="stylesheet" href="./css/simple-header.css">
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- 헤더 -->
+      <div id="simple-header"></div>
+
+      <!-- <header class="header mt5 pl2 pr2">
+        <div class="search-logo">
+          <a href="#"><img src="./img/pagelogo1.png" alt="로고" /></a>
+        </div>
+
+        <div class="auth-area">
+          <a href="#" class="a-rounded-al login pl2">로그인</a>
+        </div>
+      </header> -->
+
+      <main class="notice-border-page">
+        <div class="backlink mb4">
+          <a href="/service-center.html" class="btn-to-service">돌아가기</a>
+        </div>
+        <section class="notice-section">
+          <h2 class="section-title">📢고정공지</h2>
+          <ul class="important-notice">
+            <li><a href="#">[공지] 개인정보 처리방침 개정 안내</a></li>
+            <li><a href="#">[공지] 고객센터 및 AS 센터 휴무 안내</a></li>
+          </ul>
+        </section>
+
+        <section class="notice-border mt5">
+          <h2 class="section-title">📢게시판</h2>
+          <table class="notice-table" aria-label="공지사항 목록">
+            <tbody>
+              <tr>
+                <td>
+                  <a href="/notice/view/3">[안내] 7월 이벤트 당첨자 발표</a
+                  ><br />
+                  <span class="notice-date">2025.07.04</span>
+                </td>
+              </tr>
+
+              <!-- 테이블 반복 -->
+              <tr>
+                <td>
+                  <a href="/notice/view/2">[공지] 개인정보 처리방침 개정 안내</a
+                  ><br />
+                  <span class="notice-date">2025.06.30</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/notice/view/1"
+                    >[공지] 징검다리 연휴 고객센터 휴무 안내</a
+                  ><br />
+                  <span class="notice-date">2025.05.029</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/notice/view/1"
+                    >[공지] 징검다리 연휴 고객센터 휴무 안내</a
+                  ><br />
+                  <span class="notice-date">2025.05.029</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/notice/view/1"
+                    >[공지] 징검다리 연휴 고객센터 휴무 안내</a
+                  ><br />
+                  <span class="notice-date">2025.05.029</span>
+                </td>
+
+            </tbody>
+          </table>
+
+          <!-- 여기: 페이지번호 -->
+          <div class="pagination">
+            <ul>
+              <li><a href="#">&laquo;</a></li>
+              <!-- 이전 -->
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">&raquo;</a></li>
+              <!-- 다음 -->
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <div id="footer"></div>
+    </div>
+
+
+
+    <script>
+      // 공통 헤더 불러오기
+      fetch("./simple-header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("simple-header").innerHTML = data;
+          setHeaderToggleEvent();
+        });
+
+      // 공통 푸터 불러오기
+      fetch("./footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
