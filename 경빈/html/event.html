@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>원형 돌림판</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #fafafa;
+    font-family: 'Arial', sans-serif;
+  }
+  .wheel-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+  .wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #333;
+    background: conic-gradient(
+      #ffcc00 0deg 45deg,
+      #ffd633 45deg 90deg,
+      #ffcc00 90deg 135deg,
+      #ffd633 135deg 180deg,
+      #ffcc00 180deg 225deg,
+      #ffd633 225deg 270deg,
+      #ffcc00 270deg 315deg,
+      #ffd633 315deg 360deg
+    );
+    position: relative;
+    transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  /* 상품 텍스트를 원형 안에 넣기 */
+  .label {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  /* 8개 텍스트 위치 */
+  .label:nth-child(1) { transform: rotate(22.5deg) translate(140px) rotate(-22.5deg); }
+  .label:nth-child(2) { transform: rotate(67.5deg) translate(140px) rotate(-67.5deg); }
+  .label:nth-child(3) { transform: rotate(112.5deg) translate(140px) rotate(-112.5deg); }
+  .label:nth-child(4) { transform: rotate(157.5deg) translate(140px) rotate(-157.5deg); }
+  .label:nth-child(5) { transform: rotate(202.5deg) translate(140px) rotate(-202.5deg); }
+  .label:nth-child(6) { transform: rotate(247.5deg) translate(140px) rotate(-247.5deg); }
+  .label:nth-child(7) { transform: rotate(292.5deg) translate(140px) rotate(-292.5deg); }
+  .label:nth-child(8) { transform: rotate(337.5deg) translate(140px) rotate(-337.5deg); }
+
+  /* 바늘 */
+  .pointer {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid red;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="wheel-container">
+  <div class="pointer"></div>
+  <div id="wheel" class="wheel"></div>
+
+  <div class="label">상품1</div>
+  <div class="label">상품2</div>
+  <div class="label">상품3</div>
+  <div class="label">상품4</div>
+  <div class="label">상품5</div>
+  <div class="label">상품6</div>
+  <div class="label">상품7</div>
+  <div class="label">상품8</div>
+</div>
+
+<button id="spin">돌리기</button>
+
+<script>
+  const wheel = document.getElementById('wheel');
+  const spinBtn = document.getElementById('spin');
+  let deg = 0;
+  spinBtn.addEventListener('click', () => {
+    const randomDeg = Math.floor(Math.random() * 360) + 360 * 5;
+    deg += randomDeg;
+    wheel.style.transition = 'transform 4s cubic-bezier(0.33, 1, 0.68, 1)';
+    wheel.style.transform = `rotate(${deg}deg)`;
+
+    spinBtn.disabled = true;
+
+    setTimeout(() => {
+      spinBtn.disabled = false;
+      const normalizedDeg = deg % 360;
+      const sector = Math.floor((360 - normalizedDeg + 22.5) / 45) % 8; 
+      alert(`당첨: 상품${sector + 1}`);
+    }, 4000);
+  });
+</script>
+
+</body>
+</html>

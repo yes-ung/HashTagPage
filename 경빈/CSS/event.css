@@ -1,0 +1,74 @@
+ body {
+      font-family: 'Arial', sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .wrapper {
+      border: 6px solid #3b5ca3;
+      padding: 40px;
+      text-align: center;
+      width: 300px;
+      border-radius: 10px;
+    }
+    .title {
+      font-weight: 900;
+      font-size: 28px;
+      color: #3b5ca3;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 16px;
+      font-weight: bold;
+      color: #ff4081; /* 강조 색상 */
+      margin-bottom: 20px;
+    }
+    .wheel {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 8px solid #3b5ca3;
+    }
+    .segment {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform-origin: left center;
+      background-color: #f59bda;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    .segment:nth-child(1) { transform: rotate(0deg); }
+    .segment:nth-child(2) { transform: rotate(90deg); background-color: #fff; color: #3b5ca3; }
+    .segment:nth-child(3) { transform: rotate(180deg); }
+    .segment:nth-child(4) { transform: rotate(270deg); background-color: #fff; color: #3b5ca3; }
+
+    .pointer {
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 20px solid #3b5ca3;
+      margin: 0 auto 10px;
+    }
+
+    .button {
+      background-color: #3b5ca3;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 15px;
+      font-size: 12px;
+      cursor: pointer;
+    }
