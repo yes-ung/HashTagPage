@@ -99,7 +99,7 @@
   color: var(--dark);
 }
 
-.novel-swiper .swiper-slide {
+.rank-swiper .swiper-slide {
   width: auto; /* 혹은 아래처럼 고정 px도 가능 */
   min-width: 280px;
 }
