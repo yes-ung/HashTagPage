@@ -1,0 +1,152 @@
+
+
+.service-center-page {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.faq-content-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* 내용 */
+
+/* 서치 상자 */
+
+.faq-hero {
+  text-align: center;
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  border-radius: 10px;
+}
+
+.faq-hero h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq-search-bar {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.faq-search-bar input {
+  flex: 1;
+  border: none;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.faq-search-bar .btn-search {
+  background: none;
+  border: none;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+a.float-text {
+  display: inline-block;
+  color: var(--warning);
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+}
+
+a.float-text:hover {
+  transform: translateY(-2px); 
+  color: var(--white); 
+  font-weight: 800; 
+}
+
+/* 공지사항 */
+
+.section-title a {
+  color: var(--dark);
+}
+
+.notice-section {
+  padding: 1rem;
+}
+
+.notice-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.notice-list li {
+  border-bottom: 1px solid var(--bg-subtle, #eee);
+  padding: 0.6rem 0;
+}
+
+.notice-list a {
+  text-decoration: none;
+  color: var(--dark, #222);
+  transition: all 0.2s ease-in-out;
+}
+
+.notice-list a:hover {
+  font-weight: bold;
+  color: var(--primary-blue1, #003399);
+}
+
+/* FAQ */
+
+.faq-category {
+  padding: 1rem;
+}
+
+.faq-category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.faq-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--primary-blue1, #003399);
+  color: var(--primary-blue1, #003399);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--white);
+}
+
+.faq-btn:hover {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  transform: translateY(-2px);
+}
+
+  /* 반응형 : 태블릿 */
+
+@media screen and (min-width: 768px){
+  .service-center-page {
+    height: 60vw;
+  }
+  .faq-content-row {
+    flex-direction: row;
+  }
+
+  .notice-section, .faq-category {
+    flex: 1;
+    width: auto;
+  }
+
+
+
+}

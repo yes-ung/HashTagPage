@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faq</title>
+    <link rel="stylesheet" href="./css/00_style.css" />
+    <link rel="stylesheet" href="./css/faq.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div id="simple-header"></div>
+
+      <main class="faq-page">
+        <h1 class="faq-title">자주 묻는 질문</h1>
+
+        <!-- 서치바 -->
+          <!-- 서비스 센터로 돌아가기 -->
+          <div class="box-bar mt4">
+            <a href="/service-center.html" class="backlink">돌아가기</a>
+
+          <!-- FAQ 내 검색 -->
+          <div class="faq-search-bar">
+            <button class="btn-search pl3">#</button>
+            <input type="text" placeholder="검색어 입력" />
+          </div>
+          </div>
+
+          <!-- 검색어 버튼 -->
+        <div class="box-bar">
+          <div class="faq-category-buttons">
+            <a href="#" class="faq-btn">웹 이용</a>
+            <a href="#" class="faq-btn">콘텐츠 이용</a>
+            <a href="#" class="faq-btn">결제</a>
+            <a href="#" class="faq-btn">포인트 사용</a>
+          </div>
+        </div>
+          <!-- 질문과 답변 목록 -->
+        <section class="faq-section mt1">
+          <ul class="faq-list">
+            <li class="faq-item">
+              <button class="faq-question">웹사이트 바로가기 생성 방법</button>
+              <div class="faq-answer">
+                앱 마켓사의 정책으로 인해 #PAGE 앱에서는 웹사이트 연동이
+                분리되어...
+              </div>
+            </li>
+
+          <!-- 반복 -->
+            <li class="faq-item">
+              <button class="faq-question">오프라인에서도 볼 수 있나요?</button>
+              <div class="faq-answer">
+                일부 콘텐츠는 다운로드 후 네트워크 없이도 이용 가능합니다.
+              </div>
+            </li>
+
+          </ul>
+        </section>
+      </main>
+
+      <div id="footer"></div>
+    </div>
+
+
+  <!-- FAQ : 드롭다운 -->
+<script>
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    btn.nextElementSibling.classList.toggle('show');
+  });
+});
+</script>
+
+    <script>
+      // 공통 헤더 불러오기
+      fetch("./simple-header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("simple-header").innerHTML = data;
+        });
+
+      // 공통 푸터 불러오기
+      fetch("./footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+
+  </body>
+</html>

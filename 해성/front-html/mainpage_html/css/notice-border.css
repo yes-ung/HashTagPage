@@ -1,0 +1,138 @@
+
+.notice-border-page{
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem 0.5rem;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.backlink {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-to-service {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--white);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: var(--primary-blue1);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-to-service:hover {
+  background-color: var(--primary-blue1);
+  color: white;
+}
+
+.section-title {
+  border: 1px solid #ccc;
+  color: var(--white);
+  background-color: var(--primary-blue1);
+  padding: 1rem 1rem;
+  border-radius: 14px;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* 고정 공지 */
+
+.important-notice {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.important-notice li {
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid var(--bg-subtle, #f2f2f2);
+}
+
+.important-notice li a {
+  text-decoration: none;
+  color: var(--dark, #222);
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.important-notice li a:hover {
+  color: var(--primary-blue1, #003399);
+  font-weight: bold;
+}
+
+/* 게시판 테이블 */
+.notice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.notice-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.notice-table td a {
+  color: var(--dark, #333);
+  text-decoration: none;
+}
+
+.notice-table td a:hover {
+  color: var(--primary-blue2, #0055aa);
+  font-weight: 600;
+}
+
+.notice-date {
+  font-size: 0.85rem;
+  color: var(--sub2, #888);
+  display: block;
+  margin-top: 0.2rem;
+}
+
+/* 페이지네이션 */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination ul {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.pagination li a {
+  display: block;
+  padding: 0.3rem 1rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  color: var(--primary-blue1, #003399);
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination li a:hover {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+}
+
+.pagination .active a {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  font-weight: bold;
+  border-color: var(--primary-blue1);
+}
+
+.pagination li.active a {
+  background-color: var(--primary-blue1);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
