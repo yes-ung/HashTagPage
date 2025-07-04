@@ -1,0 +1,161 @@
+body {
+    background-color: #ffffff;
+}
+
+/* 전체 레이아웃 */
+.myPurchase-container {
+    background-color: #ffffff;
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 사이드 메뉴 */
+.myPurchase-sidebar-box {
+    width: 12rem;
+
+}
+
+.myPurchase-sidebar {
+    padding-left: 2rem;
+
+}
+
+.myPurchase-sidebar li {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.myPurchase-sidebar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.myPurchase-divider {
+    width: 1px;
+    background-color: var(--bg-subtle);
+    height: auto;
+    /* 기본은 콘텐츠 높이에 맞춤 */
+    margin: 0 0 1rem 0;
+}
+
+
+
+.myPurchase-content {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+}
+
+
+
+.myPurchase-title {
+    margin-left: 1rem;
+
+}
+
+.myPurchase-subtitle h4 {
+    border-bottom: 0.1rem solid var(--bg-subtle);
+    padding: 1rem 0 1rem 0;
+}
+
+
+
+
+.myPurchase-main {
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.myPurchase-main-box {
+    width: auto;
+    display: flex;
+    max-width: 900px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+.myPurchase-table th {
+  width: 60vw;
+  height: 5vh;
+  color: white;
+  background-color: cornflowerblue;
+  border:2px solid rgb(255, 255, 255);
+  
+}
+
+.myPurchase-table td {
+  padding-top: 2rem;
+  
+}
+
+
+
+@media (max-width: 768px) {
+    .myPurchase-container {
+        display: flex;
+        flex-direction: column;
+        /* 세로로 정렬 */
+        margin-top: 1rem;
+    }
+
+    .myPurchase-sidebar-box {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--bg-subtle);
+
+    }
+
+
+    .myPurchase-sidebar {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0 auto;
+        padding: auto;
+    }
+
+    .myPurchase-sidebar li {
+        font-size: small;
+        font-weight: bold;
+    }
+
+    .myPurchase-sidebar li a {
+        text-decoration: none;
+        color: var(--dark);
+    }
+
+    .myPurchase-title {
+        margin-left: 0;
+        /* 모바일에서만 왼쪽으로 붙임 */
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+
+    .myPurchase-content {
+        width: 100%;
+       
+    }
+
+        .myPurchase-table {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .myPurchase-table table {
+    font-size: 0.9rem;
+  }
+
+  .myPurchase-table td {
+  padding: 2rem 0 0 2rem;
+  
+}
+
+}

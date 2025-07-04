@@ -1,0 +1,176 @@
+body {
+    background-color: #ffffff;
+}
+
+/* 전체 레이아웃 */
+.mypage-container {
+    background-color: #ffffff;
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 사이드 메뉴 */
+.mypage-sidebar-box {
+    width: 12rem;
+
+}
+
+.mypage-sidebar {
+    padding-left: 2rem;
+
+}
+
+.mypage-sidebar li {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.mypage-sidebar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.mypage-divider {
+    width: 1px;
+    background-color: var(--bg-subtle);
+    height: auto;
+    /* 기본은 콘텐츠 높이에 맞춤 */
+    margin: 0 0 1rem 0;
+}
+
+
+
+.mypage-content {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+}
+
+
+
+.mypage-title {
+    margin-left: 1rem;
+
+}
+
+.mypage-subtitle h4 {
+    border-bottom: 0.1rem solid var(--bg-subtle);
+    padding: 1rem 0 1rem 0;
+}
+
+
+
+
+.mypage-main {
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+
+
+}
+
+.mypage-main-box {
+    width: auto;
+    display: flex;
+    max-width: 900px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+     flex-direction: column;
+}
+
+
+.profile-img {
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.profile-img-button {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: left;
+}
+
+.mypage-update {
+  text-align: left; /* 왼쪽 정렬 */
+  
+}
+
+.mypage-update input {
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
+ 
+}
+
+
+/* 회원탈퇴 버튼 */
+.bye {
+  margin-top: auto;
+  margin-bottom: 2rem;
+
+}
+
+
+
+@media (max-width: 768px) {
+    .mypage-container {
+        display: flex;
+        flex-direction: column;
+        /* 세로로 정렬 */
+        margin-top: 1rem;
+    }
+
+    .mypage-sidebar-box {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--bg-subtle);
+
+    }
+
+
+    .mypage-sidebar {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0 auto;
+        padding: auto;
+    }
+
+    .mypage-sidebar li {
+        font-size: small;
+        font-weight: bold;
+    }
+
+    .mypage-sidebar li a {
+        text-decoration: none;
+        color: var(--dark);
+    }
+
+    .mypage-title {
+        margin-left: 0;
+        /* 모바일에서만 왼쪽으로 붙임 */
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+      .bye {
+    
+    justify-items: center;
+    padding-top: 1rem;
+  }
+
+    .mypage-update input {
+     max-width: 100%;
+     flex: 1;
+    }
+
+
+
+
+
+}

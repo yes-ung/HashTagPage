@@ -1,0 +1,169 @@
+body {
+    background-color: #ffffff;
+}
+
+/* 전체 레이아웃 */
+.myinquirysend-container {
+    background-color: #ffffff;
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 사이드 메뉴 */
+.myinquirysend-sidebar-box {
+    width: 12rem;
+
+}
+
+.myinquirysend-sidebar {
+    padding-left: 2rem;
+
+}
+
+.myinquirysend-sidebar li {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.myinquirysend-sidebar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.myinquirysend-divider {
+    width: 1px;
+    background-color: var(--bg-subtle);
+    height: auto;
+    /* 기본은 콘텐츠 높이에 맞춤 */
+    margin: 0 0 1rem 0;
+}
+
+
+
+.myinquirysend-content {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+}
+
+
+
+.myinquirysend-title {
+    margin-left: 1rem;
+
+}
+
+.myinquirysend-subtitle h4 {
+    border-bottom: 0.1rem solid var(--bg-subtle);
+    padding: 1rem 0 1rem 0;
+}
+
+
+
+
+.myinquirysend-main {
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.myinquirysend-main-box {
+    width: auto;
+    display: flex;
+    max-width: 900px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.myinquirysend-main-body{
+    width: 99vw;
+    
+}
+
+
+
+.myinquirysend-list li{
+    display: flex;
+    padding-bottom: 1rem;
+    border: 1px solid black;
+    text-align: left;
+    
+}
+.myinquirysend-list li a{
+    width: 100%;
+    padding-top: 0.5rem;
+    color: black;
+        
+}
+
+.btn-myinquirysend {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media (max-width: 768px) {
+    .myinquirysend-container {
+        display: flex;
+        flex-direction: column;
+        /* 세로로 정렬 */
+        margin-top: 1rem;
+    }
+
+    .myinquirysend-sidebar-box {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--bg-subtle);
+
+    }
+
+
+    .myinquirysend-sidebar {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0 auto;
+        padding: auto;
+    }
+
+    .myinquirysend-sidebar li {
+        font-size: small;
+        font-weight: bold;
+    }
+
+    .myinquirysend-sidebar li a {
+        text-decoration: none;
+        color: var(--dark);
+    }
+
+    .myinquirysend-title {
+        margin-left: 0;
+        /* 모바일에서만 왼쪽으로 붙임 */
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+
+  
+
+.myinquirysend-list li{
+    padding-left: 1rem;
+    width: 92%;
+    
+
+}
+
+.btn-myinquirysend {
+    padding-right: 2rem;
+}
+
+
+
+
+
+}

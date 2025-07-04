@@ -28,7 +28,7 @@ body {
   padding-top: 0.5rem;
 }
 
-.main {
+.community-hottalk-content {
   width: 60vw;
   border-left: 0.10rem solid #a8a8a8;
   display: flex;
@@ -36,17 +36,10 @@ body {
   min-height: 100vh;
 }
 
-.community-hot-talk-body {
+.community-hottalk-title {
   margin-left: 6rem;
   
 }
-
-.community-hot-talk-wrapper h4 {
-  border-bottom: 0.1rem solid #a8a8a8;
-  padding: 6rem 0 1rem 0;
-}
-
-
 
 
 .debate-box {
