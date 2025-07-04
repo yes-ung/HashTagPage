@@ -1,0 +1,191 @@
+body {
+    background-color: #ffffff;
+}
+
+/* 전체 레이아웃 */
+.mycase-container {
+    background-color: #ffffff;
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 사이드 메뉴 */
+.mycase-sidebar-box {
+    width: 12rem;
+
+}
+
+.mycase-sidebar {
+    padding-left: 2rem;
+
+}
+
+.mycase-sidebar li {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.mycase-sidebar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.mycase-divider {
+    width: 1px;
+    background-color: var(--bg-subtle);
+    height: auto;
+    /* 기본은 콘텐츠 높이에 맞춤 */
+    margin: 0 0 1rem 0;
+}
+
+
+
+.mycase-content {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+    
+}
+
+
+
+.mycase-title {
+    margin-left: 1rem;
+
+}
+
+.mycase-subtitle h4 {
+    border-bottom: 0.1rem solid var(--bg-subtle);
+    padding: 1rem 0 1rem 0;
+}
+
+
+
+
+.mycase-main {
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+
+
+}
+
+.mycase-main-box {
+    width: auto;
+    display: flex;
+    max-width: 900px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.mycase-main-body {
+    display: flex;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+    gap: 4rem; /* flex에서도 gap 사용 가능 (모던 브라우저) */
+    justify-content: center;
+}   
+
+
+.recent-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-card img {
+  width: 150px;
+  height: 180px;
+  display: block;
+}
+
+.star-rating {
+  display: flex;
+  margin-top: 0.1rem;
+  font-size: 1rem;
+
+}
+
+.star {
+  color: tomato;
+}
+
+.score {
+  margin-left: 0.3rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .mycase-container {
+        display: flex;
+        flex-direction: column;
+        /* 세로로 정렬 */
+        margin-top: 1rem;
+    }
+
+    .mycase-sidebar-box {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--bg-subtle);
+
+    }
+
+
+    .mycase-sidebar {
+        list-style: none;
+        display: flex;
+        gap: 10rem;
+        margin: 0 auto;
+        margin-left: 2rem;
+        
+        
+    }
+
+    .mycase-sidebar li {
+        font-size: small;
+        font-weight: bold;
+    }
+
+    .mycase-sidebar li a {
+        text-decoration: none;
+        color: var(--dark);
+    }
+
+    .mycase-title {
+        margin-left: 0;
+        margin-right: 0;
+        /* 모바일에서만 왼쪽으로 붙임 */
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
+    .mycase-main {
+        justify-content: flex-start;
+    }
+
+    .mycase-main-box {
+        margin-left: 0;
+    }
+
+    .mycase-main-body {
+        justify-content: flex-start;
+    }
+
+    .mycase-content {
+        width: 100%;
+      
+    }
+
+
+
+
+
+
+
+}

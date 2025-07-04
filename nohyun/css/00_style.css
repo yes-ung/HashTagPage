@@ -1,5 +1,5 @@
 
-/*  */
+/* 공통 컬러 */
 :root {
     --sub1: #212529;
     --sub2: #6C757D;
@@ -29,11 +29,31 @@
 
 }
 
+/* 공통 레이아웃 */
+
 * {margin: 0;padding: 0;box-sizing: border-box;}
 
 .page {width:97vw; margin: 0 auto;}
 
-body {font-family: "Montserrat","Noto Sans KR", sans-serif;line-height: 1.6;}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* 여기서 남는 공간 다 차지하게 함 */
+}
+
+body {color: var(--dark); font-family: "Montserrat","Noto Sans KR", sans-serif;line-height: 1.6;}
+
+
+/* li, a, button 스타일 */
 
 li {list-style-type: none;}
 
@@ -49,6 +69,14 @@ a.a-rounded {
   text-decoration: none; /* 밑줄 제거 */
 }
 
+a.a-rounded:hover {
+  background-color: var(--primary-blue1); /* 배경색 어둡게 */
+  color: var(--white); /* 글자 흰색으로 반전 */
+  border: 2px solid var(--primary-blue1);
+  border-radius: 999px; /* 완전 둥글게 */
+  padding: 6px 14px;
+}
+
 .a-rounded-al {
   background-color: var(--primary-blue2); /* 배경색 어둡게 */
   color: var(--white); /* 글자 흰색으로 반전 */
@@ -56,6 +84,9 @@ a.a-rounded {
   border-radius: 999px; /* 완전 둥글게 */
   padding: 6px 14px;
   font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;        /* 중요! */
+  transition: all 0.2s ease-in-out;
 }
 
 a.a-rounded-al:hover {
@@ -64,15 +95,23 @@ a.a-rounded-al:hover {
   border: 2px solid var(--primary-blue1);
   border-radius: 999px; /* 완전 둥글게 */
   padding: 6px 14px;
+  transform: translateY(-1px);
 }
 
-a.a-rounded:hover {
-  background-color: var(--primary-blue1); /* 배경색 어둡게 */
-  color: var(--white); /* 글자 흰색으로 반전 */
-  border: 2px solid var(--primary-blue1);
-  border-radius: 999px; /* 완전 둥글게 */
-  padding: 6px 14px;
+a.a-float-text {
+  display: inline-block;
+  color: var(--dark); /* 기본 색상 */
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
+
+a.a-float-text:hover {
+  transform: translateY(-2px); /* 살짝 떠오름 */
+  color: var(--primary-blue1); /* 더 진한 색상으로 */
+  font-weight: 800; /* 글자 두께도 살짝 강조 */
+}
+
 
 button {all: unset; cursor: pointer;
 }
@@ -88,13 +127,15 @@ button.btn-text-danger:hover {
 }
 
 button.btn-text-like:hover {
-    display: inline-block;
+    display: inline-blok;
     color: white;
     background-color: var(--warning);
+    border: 2px solid rgba(0, 0, 0, 0.014);
     text-align: center;
     transition: all 0.2s ease-in-out;
     border-radius: 999px;
     padding: 2px 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 button.btn-rounded {
@@ -107,6 +148,7 @@ button.btn-rounded {
   border: 2px solid transparent;
   border-radius: 999px;
   padding: 6px 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 button.btn-rounded:hover {
@@ -114,6 +156,7 @@ button.btn-rounded:hover {
   color: white;
   border: 2px solid var(--primary-blue1);
 }
+
 
 /* 공통 여백 정하기 */
 /* 마진 위 5개 */
@@ -181,6 +224,8 @@ button.btn-rounded:hover {
 .w25 {width:25% !important;}
 
 
+/* 아래는 가능한 page 설정만 참고할 것 */
+
 /* 글자 중앙정렬 */
 .tcenter{text-align:center !important;}
 /* 박스 중앙정렬 */
@@ -203,6 +248,7 @@ button.btn-rounded:hover {
     /* 박스 3개 배치 */
     .col3 {width:32% !important;}
 }
+
 /* TODO: pc */
 @media screen and (min-width: 1024px){
     .page {width: 60vw;}
