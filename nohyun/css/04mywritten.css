@@ -1,28 +1,33 @@
-body {
-    background-color: #ffffff;
-}
-
 /* 전체 레이아웃 */
 .mywritten-container {
-    background-color: #ffffff;
-    margin-top: 3rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* 세로로 정렬 */
+    margin-top: 1rem;
+
 }
 
 /* 사이드 메뉴 */
 .mywritten-sidebar-box {
-    width: 12rem;
+
+    width: 100%;
+    
+    margin: 0 auto;
+    border-bottom: 1px solid var(--bg-subtle);
+
 
 }
 
 .mywritten-sidebar {
-    padding-left: 2rem;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    justify-content: center;
 
 }
 
 .mywritten-sidebar li {
-    margin-bottom: 1.5rem;
     font-size: 0.8rem;
     font-weight: bold;
 }
@@ -30,6 +35,127 @@ body {
 .mywritten-sidebar li a {
     color: black;
     text-decoration: none;
+}
+
+
+/* 본문 제목 */
+.mywritten-title {
+    padding-top: 1rem;
+
+}
+
+.mywritten-subtitle h4 {
+    
+    border-bottom: 0.1rem solid var(--bg-subtle);
+    padding: 1rem 0 1rem 0;
+    
+}
+
+
+
+.mywritten-main {
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+    
+    
+
+}
+
+
+/* 본문 내용 */
+.mywritten-table {
+   
+    
+    border-collapse: collapse;
+
+
+}
+
+  .mywritten-table table {
+    font-size: 0.55rem;
+    
+  }
+
+.mywritten-table th, td {
+  padding: 0.4rem 0.2rem; /* 셀 패딩 축소 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    
+ 
+}
+
+.mywritten-table td {
+  background-color: #e9e9e9;
+  
+}
+
+.mywritten-table th {
+  background-color: #6a95c7;
+  border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
+}
+
+.mywritten-table table {
+  border-collapse: collapse;
+}
+
+.mywritten-table tbody tr {
+  border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
+}
+
+.title-col {
+  width: 70%;
+  text-align: left;
+}
+
+.nick-col {
+  width: 13%;
+  text-align: center;
+}
+
+.date-col {
+  width: 12%;
+  text-align: center;
+}
+
+.view-col {
+  width: 30%;
+  text-align: center;
+}
+
+
+
+@media (min-width: 1024px) {
+   .mywritten-container {
+    
+    margin-top: 3rem;
+    flex-direction: row;
+    display: flex;
+}
+
+/* 사이드 메뉴 */
+.mywritten-sidebar-box {
+    width: 12rem;
+    border-bottom: none;
+}
+
+.mywritten-sidebar {
+    padding-left: 2rem;
+    flex-direction: column;
+}
+
+.mywritten-sidebar li {
+    
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+}
+
+.mywritten-sidebar li a {
+    color: black;
+    text-decoration: none;
+   
 }
 
 .mywritten-divider {
@@ -44,24 +170,17 @@ body {
 
 .mywritten-content {
     flex: 1;
-    display: flex;
     min-width: 0;
+    
+    
 }
 
 
 
 .mywritten-title {
     margin-left: 1rem;
-
+    
 }
-
-.mywritten-subtitle h4 {
-    border-bottom: 0.1rem solid var(--bg-subtle);
-    padding: 1rem 0 1rem 0;
-}
-
-
-
 
 .mywritten-main {
     display: flex;
@@ -71,6 +190,7 @@ body {
 
 }
 
+
 .mywritten-main-box {
     width: auto;
     display: flex;
@@ -78,10 +198,11 @@ body {
     word-break: break-word;
     overflow-wrap: break-word;
     white-space: normal;
+
 }
 
 .mywritten-table {
-  
+ 
   margin: 2rem auto;
   border-collapse: collapse;
   font-size: 0.95rem;
@@ -91,10 +212,12 @@ body {
 .mywritten-table th,
 .mywritten-table td {
   
-  padding: 0.8rem ;
+  padding: 1rem ;
   text-align: left;
   vertical-align: middle;
+
 }
+
 
 .mywritten-table td {
   background-color: #e9e9e9;
@@ -107,105 +230,14 @@ body {
 }
 
 .mywritten-table table {
+    font-size: 1rem;
   border-collapse: collapse;
+  
 }
 
 .mywritten-table tbody tr {
   border-bottom: 10px solid #fff; /* 행 사이 간격처럼 */
 }
-
-.title-col {
-  /* width: 70%; */
-  text-align: left;
-}
-
-.nick-col {
-  /* width: 13%; */
-  text-align: center;
-}
-
-.date-col {
-  /* width: 12%; */
-  text-align: center;
-}
-
-.view-col {
-  /* width: 30%; */
-  text-align: center;
-}
-
-
-
-@media (max-width: 768px) {
-    .mywritten-container {
-        display: flex;
-        flex-direction: column;
-        /* 세로로 정렬 */
-        margin-top: 1rem;
-    }
-
-    .mywritten-sidebar-box {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--bg-subtle);
-
-    }
-
-
-    .mywritten-sidebar {
-        list-style: none;
-        display: flex;
-        gap: 2rem;
-        margin: 0 auto;
-        padding: auto;
-    }
-
-    .mywritten-sidebar li {
-        font-size: small;
-        font-weight: bold;
-    }
-
-    .mywritten-sidebar li a {
-        text-decoration: none;
-        color: var(--dark);
-    }
-
-    .mywritten-title {
-        margin-left: 0;
-        /* 모바일에서만 왼쪽으로 붙임 */
-        width: 99vw;
-        margin: 0 auto;
-    }
-
-
-    .mywritten-content {
-        width: 100%;
-       
-    }
-
-
-
-    
-    .mywritten-table {
-    width: 100%;
-    margin: 0;
-    
-  }
-
-  .mywritten-table table {
-    font-size: 0.55rem;
-  }
-
-  .mywritten-table th, 
-  .mywritten-table td {
-    padding: 0.3rem 0.2rem; /* 셀 패딩 축소 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; /* 줄바꿈 방지 */
-  }
-
-
-
 
 
 

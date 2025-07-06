@@ -1,28 +1,33 @@
-body {
-    background-color: #ffffff;
-}
-
 /* 전체 레이아웃 */
 .myinquiry-container {
-    background-color: #ffffff;
-    margin-top: 3rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* 세로로 정렬 */
+    margin-top: 1rem;
+
 }
 
 /* 사이드 메뉴 */
 .myinquiry-sidebar-box {
-    width: 12rem;
+
+    width: 100%;
+    
+    margin: 0 auto;
+    border-bottom: 1px solid var(--bg-subtle);
+
 
 }
 
 .myinquiry-sidebar {
-    padding-left: 2rem;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    justify-content: center;
 
 }
 
 .myinquiry-sidebar li {
-    margin-bottom: 1.5rem;
     font-size: 0.8rem;
     font-weight: bold;
 }
@@ -30,6 +35,113 @@ body {
 .myinquiry-sidebar li a {
     color: black;
     text-decoration: none;
+}
+
+
+/* 본문 제목 */
+.myinquiry-title {
+    padding-top: 1rem;
+
+}
+
+.myinquiry-subtitle h4 {
+    
+    border-bottom: 0.1rem solid var(--bg-subtle);
+    padding: 1rem 0 1rem 0;
+    
+}
+
+
+
+.myinquiry-main {
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+    
+    
+}
+
+
+.myinquiry-main-box {
+    
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    max-width: 900px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    justify-content: center;
+}
+
+
+
+
+.myinquiry-main-body{
+    width: 99vw;
+    
+}
+
+
+
+/* 몬의 입력창 */
+.myinquiry-form textarea {
+  width: 90%;
+  height: 500px; /* 원하는 만큼 높이 조절 가능 */
+  resize: vertical; /* 사용자가 세로로 크기 조절 가능 */
+  margin-left: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* 전송 버튼 */
+.myinquiry-btn-area {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem 0 1rem 0;
+  
+ 
+}
+
+
+
+
+@media (min-width: 1024px) {
+   .myinquiry-container {
+    
+    margin-top: 3rem;
+    flex-direction: row;
+    display: flex;
+}
+
+/* 사이드 메뉴 */
+.myinquiry-sidebar-box {
+    width: 12rem;
+    border-bottom: none;
+    
+}
+
+.myinquiry-sidebar {
+    padding-left: 2rem;
+    flex-direction: column;
+}
+
+.myinquiry-sidebar li {
+    
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+}
+
+.myinquiry-sidebar li a {
+    color: black;
+    text-decoration: none;
+   
 }
 
 .myinquiry-divider {
@@ -42,34 +154,28 @@ body {
 
 
 
+
 .myinquiry-content {
     flex: 1;
     display: flex;
-    min-width: 0;
+    min-width: 0;   
 }
+
 
 
 
 .myinquiry-title {
     margin-left: 1rem;
-
+    
 }
-
-.myinquiry-subtitle h4 {
-    border-bottom: 0.1rem solid var(--bg-subtle);
-    padding: 1rem 0 1rem 0;
-}
-
-
-
 
 .myinquiry-main {
     display: flex;
     padding-top: 1rem;
     width: 100%;
-    justify-content: center;
-
+    
 }
+
 
 .myinquiry-main-box {
     width: auto;
@@ -78,7 +184,9 @@ body {
     word-break: break-word;
     overflow-wrap: break-word;
     white-space: normal;
+
 }
+
 
 .myinquiry-main-body{
     width: 99vw;
@@ -101,78 +209,10 @@ body {
 
 .myinquiry-btn-area {
   display: flex;
-  justify-content: center;
-  padding: 0 0 2rem 0;
+  justify-content: flex-end;
+  padding: 1rem 3.5rem 2rem 0;
   
  
-}
-
-
-
-@media (max-width: 768px) {
-    .myinquiry-container {
-        display: flex;
-        flex-direction: column;
-        /* 세로로 정렬 */
-        margin-top: 1rem;
-    }
-
-    .myinquiry-sidebar-box {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--bg-subtle);
-
-    }
-
-
-    .myinquiry-sidebar {
-        list-style: none;
-        display: flex;
-        gap: 2rem;
-        margin: 0 auto;
-        padding: auto;
-    }
-
-    .myinquiry-sidebar li {
-        font-size: small;
-        font-weight: bold;
-    }
-
-    .myinquiry-sidebar li a {
-        text-decoration: none;
-        color: var(--dark);
-    }
-
-    .myinquiry-title {
-        margin-left: 0;
-        /* 모바일에서만 왼쪽으로 붙임 */
-        width: 90vw;
-        margin: 0 auto;
-    }
-
-
-  
-
-
-    .myinquiry-form textarea {
-  width: 90%;
-  height: 500px; /* 원하는 만큼 높이 조절 가능 */
-  resize: vertical; /* 사용자가 세로로 크기 조절 가능 */
-  padding: 1rem;
-  margin-left: 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-  
-}
-
-.myinquiry-btn-area {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 1rem 0 1rem 0;
 }
 
 

@@ -1,28 +1,32 @@
-body {
-    background-color: #ffffff;
-}
-
 /* 전체 레이아웃 */
 .mycasezzim-container {
-    background-color: #ffffff;
-    margin-top: 3rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* 세로로 정렬 */
+    margin-top: 1rem;
+   
 }
 
 /* 사이드 메뉴 */
 .mycasezzim-sidebar-box {
-    width: 12rem;
+
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--bg-subtle);
+
 
 }
 
 .mycasezzim-sidebar {
-    padding-left: 2rem;
+    list-style: none;
+    display: flex;
+    gap: 10rem;
+    padding-bottom: 1rem;
+    justify-content: center;
 
 }
 
 .mycasezzim-sidebar li {
-    margin-bottom: 1.5rem;
     font-size: 0.8rem;
     font-weight: bold;
 }
@@ -32,28 +36,12 @@ body {
     text-decoration: none;
 }
 
-.mycasezzim-divider {
-    width: 1px;
-    background-color: var(--bg-subtle);
-    height: auto;
-    /* 기본은 콘텐츠 높이에 맞춤 */
-    margin: 0 0 1rem 0;
-}
 
 
-
-.mycasezzim-content {
-    flex: 1;
-    display: flex;
-    min-width: 0;
-    
-}
-
-
-
+/* 본문 제목 */
 .mycasezzim-title {
-    margin-left: 1rem;
-
+    padding-top: 1rem;
+    
 }
 
 .mycasezzim-subtitle h4 {
@@ -69,25 +57,120 @@ body {
     padding-top: 1rem;
     width: 100%;
 
-
 }
-
-.mycasezzim-main-box {
-    width: auto;
-    display: flex;
-    max-width: 900px;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-}
-
+/* 본문 내용 */
 .mycasezzim-main-body {
     display: flex;
-    padding-top: 1rem;
     flex-wrap: wrap;
-    gap: 4rem; /* flex에서도 gap 사용 가능 (모던 브라우저) */
+    gap: 3rem; 
     justify-content: center;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
 }   
+
+/* 별점 / 하트 */
+.recent-card {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+
+
+.recent-card img {
+  width: 150px;
+  height: 180px;
+  display: block;
+}
+
+
+.heart{
+    
+    display: flex;
+    margin-right: 4.5rem;
+    margin-bottom: 3rem;
+}
+
+
+.star-rating {
+ 
+  display: flex;
+  margin-top: 0.1rem;
+  font-size: 0.9rem;
+  justify-content: flex-end;
+  
+  
+  
+}
+
+.star {
+  color: tomato;
+}
+
+.score {
+  margin-left: 0.1rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+
+
+@media (min-width: 1024px) {
+   .mycasezzim-container {
+    
+    margin-top: 3rem;
+    flex-direction: row;
+    display: flex;
+}
+
+/* 사이드 메뉴 */
+.mycasezzim-sidebar-box {
+    width: 42.1%;
+    border-bottom: none;
+}
+
+.mycasezzim-sidebar {
+    padding-left: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.mycasezzim-sidebar li {
+    
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+}
+
+.mycasezzim-sidebar li a {
+    color: black;
+    text-decoration: none;
+    
+   
+}
+
+.mycasezzim-divider {
+    width: 1px;
+    background-color: var(--bg-subtle);
+    height: auto;
+    /* 기본은 콘텐츠 높이에 맞춤 */
+    margin: 0 0 1rem 0;
+}
+
+
+
+
+
+
+
+.mycasezzim-title {
+    margin-left: 1rem;
+    
+}
+
+
 
 
 .recent-card {
@@ -100,6 +183,14 @@ body {
   height: 180px;
   display: block;
 }
+
+.heart{
+    
+ 
+    margin-right: 4rem;
+    
+}
+
 
 .star-rating {
   display: flex;
@@ -117,73 +208,6 @@ body {
   color: #555;
   font-size: 0.95rem;
 }
-
-
-
-@media (max-width: 768px) {
-    .mycasezzim-container {
-        display: flex;
-        flex-direction: column;
-        /* 세로로 정렬 */
-        margin-top: 1rem;
-    }
-
-    .mycasezzim-sidebar-box {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--bg-subtle);
-
-    }
-
-
-    .mycasezzim-sidebar {
-        list-style: none;
-        display: flex;
-        gap: 10rem;
-        margin: 0 auto;
-        margin-left: 2rem;
-        
-        
-    }
-
-    .mycasezzim-sidebar li {
-        font-size: small;
-        font-weight: bold;
-    }
-
-    .mycasezzim-sidebar li a {
-        text-decoration: none;
-        color: var(--dark);
-    }
-
-    .mycasezzim-title {
-        margin-left: 0;
-        margin-right: 0;
-        /* 모바일에서만 왼쪽으로 붙임 */
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    
-    .mycasezzim-main {
-        justify-content: flex-start;
-    }
-
-    .mycasezzim-main-box {
-        margin-left: 0;
-    }
-
-    .mycasezzim-main-body {
-        justify-content: flex-start;
-    }
-
-    .mycasezzim-content {
-        width: 100%;
-      
-    }
-
-
-
 
 
 
