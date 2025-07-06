@@ -1,0 +1,383 @@
+/* 전체 레이아웃 */
+.community-hottalk-container {
+    display: flex;
+    flex-direction: column;
+    /* 세로로 정렬 */
+    margin-top: 1rem;
+   
+}
+
+/* 사이드 메뉴 */
+.community-hottalk-sidebar-box {
+
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--bg-subtle);
+
+
+}
+
+.community-hottalk-sidebar {
+    list-style: none;
+    display: flex;
+    gap: 6rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+
+}
+
+.community-hottalk-sidebar li {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.community-hottalk-sidebar li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+.community-hottalk-title {
+    padding-top: 1rem;
+    
+}
+
+.community-hottalk-subtitle h4 {
+    border-bottom: 0.1rem solid var(--bg-subtle);
+    padding: 1rem 0 1rem 0;
+}
+
+
+
+
+.community-hottalk-main {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: center;
+    
+
+}
+
+.community-hottalk-main-box {
+    width: auto;
+    display: flex;
+    max-width: 900px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    
+}
+
+
+
+
+.community-hottalk-main-body {
+  
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  
+}
+
+
+
+
+.debate-box {
+  width: 300px;
+  margin: 2rem auto;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+  
+}
+
+.debate-box h2 {
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  
+  
+}
+
+.question-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.vote-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option .percent {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.option button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.option.blue .percent {
+  color: #1e4aa1;
+}
+
+.option.red .percent {
+  color: #d10000;
+}
+
+.option.blue button {
+  background-color: #1e4aa1;
+}
+
+.option.red button {
+  background-color: #d10000;
+}
+
+
+
+.comment {
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  font-size: small;
+  
+  
+}
+.comments {
+  justify-content: center;
+  text-align: left;
+  
+}
+
+.comment-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.comment-box input {
+  flex: 1;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.comment-box button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+   .community-hottalk-container {
+    
+    margin-top: 3rem;
+    flex-direction: row;
+    display: flex;
+}
+
+/* 사이드 메뉴 */
+.community-hottalk-sidebar-box {
+    width: 16.7%;
+    border-bottom: none;
+}
+
+.community-hottalk-sidebar {
+    padding-left: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.community-hottalk-sidebar li {
+    
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+}
+
+.community-hottalk-sidebar li a {
+    color: black;
+    text-decoration: none;
+    
+   
+}
+
+.community-hottalk-divider {
+    width: 1px;
+    background-color: var(--bg-subtle);
+    height: auto;
+    /* 기본은 콘텐츠 높이에 맞춤 */
+    margin: 0 0 1rem 0;
+}
+
+
+
+.community-hottalk-content {
+    flex: 1;
+    display: flex;
+    
+    
+}
+
+.community-hottalk-title {
+    margin-left: 1rem;
+
+}
+
+.community-hottalk-main-body {
+      display: flex;
+    flex-wrap: wrap;
+    gap: 3rem; 
+    
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+
+.debate-box {
+  width: 500px;
+  margin: 0 auto;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+  padding-left: 11rem;
+    
+    
+
+
+}
+
+.debate-box h2 {
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.question-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.vote-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option .percent {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.option button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.option.blue .percent {
+  color: #1e4aa1;
+}
+
+.option.red .percent {
+  color: #d10000;
+}
+
+.option.blue button {
+  background-color: #1e4aa1;
+}
+
+.option.red button {
+  background-color: #d10000;
+}
+
+
+
+.comment {
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  font-size: small;
+  width: 30vw;
+  
+  
+}
+.comments {
+  padding-left: 10rem;
+  margin: 1rem auto; /* ← 중앙 정렬 핵심 */
+  text-align: left;
+  
+  
+}
+
+.comment-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  
+}
+
+.comment-box input {
+  flex: 1;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.comment-box button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+}
