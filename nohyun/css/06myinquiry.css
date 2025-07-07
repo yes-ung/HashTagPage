@@ -85,11 +85,20 @@
 
 
 /* 몬의 입력창 */
+
+.myinquiry-form {
+
+  display: flex;
+   flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 .myinquiry-form textarea {
   width: 90%;
   height: 500px; /* 원하는 만큼 높이 조절 가능 */
   resize: vertical; /* 사용자가 세로로 크기 조절 가능 */
-  margin-left: 1rem;
+  
   padding: 1rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -100,14 +109,21 @@
 
 /* 전송 버튼 */
 .myinquiry-btn-area {
+ 
+  padding: 1rem 0 1rem 0;
+  width: 90%;
+  background-color: #2E3E5A;
+  border: none;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  padding: 1rem 0 1rem 0;
+  margin-bottom: 1rem;
   
- 
 }
-
+.myinquiry-btn-area button {
+    color: white;
+    
+}
 
 
 
@@ -195,10 +211,10 @@
 
 
 .myinquiry-form textarea {
-  width: 90%;
+  
   height: 300px; /* 원하는 만큼 높이 조절 가능 */
   resize: vertical; /* 사용자가 세로로 크기 조절 가능 */
-  margin-left: 2rem;
+ 
   padding: 1rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -207,13 +223,19 @@
   box-sizing: border-box;
 }
 
+
 .myinquiry-btn-area {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem 3.5rem 2rem 0;
-  
  
+  padding: 0.5rem 0 1rem 0;
+  width: 90%;
+  background-color: #2E3E5A;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  
 }
+
 
 
 }

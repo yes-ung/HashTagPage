@@ -1,0 +1,184 @@
+/* main-header */
+
+.main-header {
+  border-bottom: 1.5px solid var(--bg-subtle);
+  background-color: white;
+}
+
+/* 헤더 컨테이너 */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 3.8rem;
+  object-fit: contain;
+}
+
+.auth-area a {
+  font-size: 1rem;
+  color: var(--primary-blue1);
+  font-weight: bold;
+}
+
+.auth-area .logout {
+  display: none;
+}
+
+/* 내비게이션 전체 구조 */
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.6rem 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-bar img{
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.search-bar .btn-search {
+  background: none;
+  border: none;
+  padding: 0 0.2rem 0 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+
+/* 메뉴 네비게이션 */
+ .menu-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  width: 120px;
+  text-align: center;
+  position: relative;
+}
+
+/* 서브메뉴 영역 */
+.submenu-box {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 1rem;
+  padding-top: 0.3rem;
+  width: 100%;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  font-size: 0.95rem;
+  justify-content: flex-start;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.submenu-box::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.submenu-box a {
+  color: var(--primary-blue1);
+  padding: 0.3rem 0;
+  text-decoration: none;
+  font-weight: bold;
+  scroll-snap-align: start;
+}
+
+.submenu-box a:hover {
+  text-decoration: underline;
+}
+
+/* 메뉴 버튼 */
+.menu-link {
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  color: var(--primary-text);
+}
+
+.menu-link:focus {
+  outline: none; /* 포커스 테두리 제거 */
+}
+
+.menu-link:hover {
+  background-color: var(--bg-subtle);
+}
+
+.menu-link.active {
+  background-color: var(--primary-blue1);
+  color: white;
+}
+
+@media screen and (min-width: 768px){
+  .auth-area .logout {
+    display: flex;
+}
+
+  .auth-area{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    min-height: 2.5rem; /* or 버튼 높이에 맞춰 설정 */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-bar {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    min-width: 7rem;
+  }
+
+}

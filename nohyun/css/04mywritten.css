@@ -63,6 +63,16 @@
 }
 
 
+.mywritten-main-box {
+    display: flex;
+    
+    width: auto;
+    
+    
+
+}
+
+
 /* 본문 내용 */
 .mywritten-table {
    
@@ -78,7 +88,8 @@
   }
 
 .mywritten-table th, td {
-  padding: 0.4rem 0.2rem; /* 셀 패딩 축소 */
+    
+    padding: 0.4rem; /* 셀 패딩 축소 */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; /* 줄바꿈 방지 */
@@ -87,13 +98,21 @@
 }
 
 .mywritten-table td {
-  background-color: #e9e9e9;
-  
+  background-color: white;
+    
 }
 
+.mywritten-table td a {
+  background-color: white;
+  color: black;
+}
+
+
 .mywritten-table th {
-  background-color: #6a95c7;
+  color: white;
+  background-color: #2E3E5A;
   border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
+  
 }
 
 .mywritten-table table {
@@ -107,6 +126,7 @@
 .title-col {
   width: 70%;
   text-align: left;
+  
 }
 
 .nick-col {
@@ -192,17 +212,14 @@
 
 
 .mywritten-main-box {
-    width: auto;
+  
     display: flex;
-    max-width: 900px;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-
+   
+    justify-content: center;
 }
 
 .mywritten-table {
- 
+  width: 45vw;
   margin: 2rem auto;
   border-collapse: collapse;
   font-size: 0.95rem;
@@ -212,25 +229,20 @@
 .mywritten-table th,
 .mywritten-table td {
   
-  padding: 1rem ;
-  text-align: left;
-  vertical-align: middle;
+  padding: 0.5rem ;
+
 
 }
 
 
-.mywritten-table td {
-  background-color: #e9e9e9;
-  
-}
 
 .mywritten-table th {
-  background-color: #6a95c7;
+  
   border-bottom: 10px solid #fff; /* 행 사이 간격처럼 */
 }
 
 .mywritten-table table {
-    font-size: 1rem;
+  font-size: 12px;
   border-collapse: collapse;
   
 }
