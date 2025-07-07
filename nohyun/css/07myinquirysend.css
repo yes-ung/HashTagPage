@@ -62,45 +62,85 @@
 }
 
 .myinquirysend-main-box {
-    width: 100%;
-    display: flex;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-    justify-content: center;
+     display: flex;
+    
+    width: auto;
 }
 
-.myinquirysend-main-body{
-    width: 90%;
-    
-}
+
+
 
 
 /* 본문 내용 */
-.myinquirysend-list li{
-    display: flex;
-    padding-bottom: 1rem;
-    border: 1px solid black;
-    text-align: left;
+.myinquirysend-table {
+   
+    
+    border-collapse: collapse;
+
+
+}
+
+  .myinquirysend-table table {
+    font-size: 0.55rem;
+    
+  }
+
+.myinquirysend-table th, td {
+    
+    padding: 0.4rem; /* 셀 패딩 축소 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    
+ 
+}
+
+.myinquirysend-table td {
+  background-color: white;
     
 }
-.myinquirysend-list li a{
+
+.myinquirysend-table td a {
+  background-color: white;
+  color: black;
+}
+
+
+.myinquirysend-table th {
+  color: white;
+  background-color: #2E3E5A;
+  border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
   
-    color: black;
-    padding-left: 1rem;
-    width: 100%;
-        
 }
 
-.myinquirysend-btn {
-    padding-top: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: flex-end;
-
-     
+.myinquirysend-table table {
+  border-collapse: collapse;
 }
 
+.myinquirysend-table tbody tr {
+  border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
+}
+
+.title-col {
+  width: 70%;
+  text-align: left;
+  
+}
+
+.nick-col {
+  width: 13%;
+  text-align: center;
+}
+
+.date-col {
+  width: 12%;
+  text-align: center;
+}
+
+.view-col {
+  width: 30%;
+  text-align: center;
+}
 
 
 
@@ -150,7 +190,7 @@
 
 .myinquirysend-content {
     flex: 1;
-    display: flex;
+    
     min-width: 0;   
 }
 
@@ -166,47 +206,51 @@
     display: flex;
     padding-top: 1rem;
     width: 100%;
-    
+    justify-content: center;
+
 }
 
 
 .myinquirysend-main-box {
-    width: auto;
+  
     display: flex;
-    max-width: 900px;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+   
+    justify-content: center;
+}
+
+.myinquirysend-table {
+  width: 45vw;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  
+}
+
+.myinquirysend-table th,
+.myinquirysend-table td {
+  
+  padding: 0.5rem ;
+
 
 }
 
 
-.myinquirysend-main-body{
-    width: 99vw;
-    
+
+.myinquirysend-table th {
+  
+  border-bottom: 10px solid #fff; /* 행 사이 간격처럼 */
 }
 
-.myinquirysend-list li{
-    display: flex;
-    padding-bottom: 1rem;
-    border: 1px solid black;
-    text-align: left;
-    
-}
-.myinquirysend-list li a{
-    width: 100%;
-    padding-top: 0.5rem;
-    
-    
-
+.myinquirysend-table table {
+  font-size: 12px;
+  border-collapse: collapse;
+  
 }
 
-.myinquirysend-btn {
-    display: flex;
-    justify-content: flex-end;
-
-    
+.myinquirysend-table tbody tr {
+  border-bottom: 10px solid #fff; /* 행 사이 간격처럼 */
 }
+
 
 
 }

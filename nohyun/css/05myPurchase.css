@@ -81,12 +81,14 @@
 .myPurchase-table th {
     width: 60vw;
     height: 5vh;
-    color: white;
-    background-color: cornflowerblue;
-    border: 2px solid rgb(255, 255, 255);
+    background-color: #2E3E5A;
+    border: 3px solid rgb(255, 255, 255);
 
 }
 
+.title-col a , .title2-col a {
+    color: white;
+}
 
 
 .cash-list {

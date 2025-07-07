@@ -76,10 +76,10 @@
   }
 
 .community-freetalk-table th, td {
-  padding: 0.4rem 0.2rem; /* 셀 패딩 축소 */
+    padding: 0.4rem 0.2rem; 
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; /* 줄바꿈 방지 */
+    white-space: nowrap; 
     
  
 }
@@ -91,7 +91,7 @@
 
 .community-freetalk-table th {
   background-color: #6a95c7;
-  border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
+  border-bottom: 4px solid #fff; 
 }
 
 .community-freetalk-table table {
@@ -99,11 +99,17 @@
 }
 
 .community-freetalk-table tbody tr {
-  border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
+  border-bottom: 4px solid #fff; 
 }
 
+.num-col {
+  width: 10%;
+  text-align: left;
+}
+
+
 .title-col {
-  width: 70%;
+  width: 35%;
   text-align: left;
 }
 
@@ -127,8 +133,8 @@
   
   
   display: flex;
-  justify-content: flex-end; /* 오른쪽 정렬 */
-  gap: 1rem;                 /* 버튼 사이 간격 */
+  justify-content: flex-end; 
+  gap: 1rem;                 
   
   font-size: 0.6rem;
 
@@ -137,13 +143,13 @@
 /* 페이지 리스트 버튼 */
 .bottom-page-list {
   display: flex;
-  justify-content: center; /* 가운데 정렬 */
+  justify-content: center; 
   margin-top: 2rem;
 }
 
 .pagination {
-  display: flex;           /* ← 세로 → 가로 정렬 핵심 */
-  gap: 0.5rem;             /* 번호 간격 */
+  display: flex;          
+  gap: 0.5rem;             
 }
 
 .page-item a {
@@ -200,7 +206,6 @@
     width: 1px;
     background-color: var(--bg-subtle);
     height: auto;
-    /* 기본은 콘텐츠 높이에 맞춤 */
     margin: 0 0 1rem 0;
 }
 

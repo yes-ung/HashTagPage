@@ -40,11 +40,11 @@ html, body {
   margin: 0;
 }
 
-.page {
+/* .page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
+} */
 
 main {
   flex: 1; /* 여기서 남는 공간 다 차지하게 함 */

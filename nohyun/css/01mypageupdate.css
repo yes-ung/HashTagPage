@@ -33,7 +33,7 @@
 }
 
 .mypage-sidebar li a {
-    color: black;
+    color: var(--basic6-dark);
     text-decoration: none;
 }
 
@@ -54,50 +54,84 @@
 
 .mypage-main {
     display: flex;
-    padding-top: 1rem;
+    padding-top: 2rem;
     width: 100%;
+    justify-content: center;
 
 
 }
 
 /* 프로필 이미지 박스 */
 .profile-img {
-
+    
     text-align: left;
 }
 
 .profile-img-button {
-    width: 53%;
+    width: 46vw;
     margin-bottom: 0.5rem;
     display: flex;
-    gap: 0.5rem;
     justify-content: flex-end;
+    font-size: 14px;
 }
+.profile-img-button button {
+    
+  background-color: #2E3E5A;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 
 /* 프로필 본문 */
 .mypage-update {
     text-align: left;
     /* 왼쪽 정렬 */
     padding-top: 0.5rem;
+    font-size: 13px;
     
 }
 
 .mypage-update input {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 13px;
     padding: 0.3rem;
     box-sizing: border-box;
-
+    border: 1px solid gray;
+    opacity: 80%;
 }
+
+.update-box {
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 0.6rem;
+    margin-top: 1rem
+    
+}
+
+
+
 
 
 /* 회원탈퇴 버튼 */
 .bye {
+   
     height: 50px;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    justify-items: center;
-    background-color: aquamarine;
+       display: flex;         /* 플렉스 활성화 */
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* 세로 중앙 */
+    background-color: #2E3E5A;
+}
+
+
+.bye h5 a {
+  color: white;
 }
 
 @media (min-width: 1024px) {
@@ -127,7 +161,7 @@
 }
 
 .mypage-sidebar li a {
-    color: black;
+    color: var(--basic6-dark);
     text-decoration: none;
    
 }
@@ -140,7 +174,13 @@
     margin: 0 0 1rem 0;
 }
 
+.mypage-main {
+    display: flex;
+ 
+    justify-content: flex-start;
 
+
+}
 
 .mypage-content {
     flex: 1;
@@ -161,26 +201,36 @@
   text-align: left;
 }
 
+
+
+
 .profile-img-button {
-  
+  width: 10.5vw;
   display: flex;
-  gap: 0.5rem;
+  
   justify-content: flex-end;
 }
 
 .mypage-update {
   text-align: left; /* 왼쪽 정렬 */
-  
+  padding-top: none;
+  font-size: 14px;
 }
 
 .mypage-update input {
-  margin-top: 1rem;
-  padding: 0.5rem;
+
   box-sizing: border-box;
  
 }
 
+.update-box {
 
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+
+    margin-top: 1rem
+    
+}
 
 
 }
