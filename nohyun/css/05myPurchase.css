@@ -4,7 +4,7 @@
     flex-direction: column;
     /* 세로로 정렬 */
     margin-top: 1rem;
-
+    margin-bottom: 1rem;
 }
 
 /* 사이드 메뉴 */
@@ -83,7 +83,7 @@
     height: 5vh;
     background-color: #2E3E5A;
     border: 3px solid rgb(255, 255, 255);
-
+    border-radius: 11px;
 }
 
 .title-col a , .title2-col a {
@@ -101,6 +101,49 @@
 
 }
 
+
+/* 페이지네이션 */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination ul {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.pagination li a {
+  display: block;
+  padding: 0.3rem 1rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  color: var(--primary-blue1, #003399);
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination li a:hover {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+}
+
+.pagination .active a {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  font-weight: bold;
+  border-color: var(--primary-blue1);
+}
+
+.pagination li.active a {
+  background-color: var(--primary-blue1);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
 
 
 @media (min-width: 1024px) {

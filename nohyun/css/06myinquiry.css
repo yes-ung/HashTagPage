@@ -4,7 +4,7 @@
     flex-direction: column;
     /* 세로로 정렬 */
     margin-top: 1rem;
-
+    margin-bottom: 1rem;
 }
 
 /* 사이드 메뉴 */
@@ -84,7 +84,7 @@
 
 
 
-/* 몬의 입력창 */
+/* 문의 입력창 */
 
 .myinquiry-form {
 
@@ -95,8 +95,8 @@
 }
 
 .myinquiry-form textarea {
-  width: 90%;
-  height: 500px; /* 원하는 만큼 높이 조절 가능 */
+  width: 95%;
+  height: 300px; /* 원하는 만큼 높이 조절 가능 */
   resize: vertical; /* 사용자가 세로로 크기 조절 가능 */
   
   padding: 1rem;
@@ -111,13 +111,13 @@
 .myinquiry-btn-area {
  
   padding: 1rem 0 1rem 0;
-  width: 90%;
+  width: 95%;
   background-color: #2E3E5A;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.9rem;
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   
 }
 .myinquiry-btn-area button {
@@ -125,7 +125,107 @@
     
 }
 
+.myinquirysend-table {
+    border-collapse: collapse;
+    border-bottom: 1px solid var(--bg-subtle);
+    padding-bottom: 0.7rem;
+    padding-top: 0.7rem; 
+      
+}
 
+  .myinquirysend-table table {
+    font-size: 0.8rem;
+    
+  }
+
+.myinquirysend-table th {
+    
+    padding: 0.4rem; /* 셀 패딩 축소 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    
+ 
+}
+
+.myinquirysend-table td {
+  background-color: white;
+  padding-left: 0.4rem; 
+}
+
+.myinquirysend-table th a {
+  color: var(--dark);
+}
+
+
+
+.myinquirysend-table th {
+ 
+  border-collapse: collapse;
+  border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
+  
+}
+
+.myinquirysend-table table {
+  border-collapse: collapse;
+}
+
+.myinquirysend-table tbody tr {
+  border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
+}
+
+.delete {
+  
+  display: flex;
+  justify-content: flex-end;
+  
+  color: var(--bg-subtle);
+
+}
+
+
+/* 페이지네이션 */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination ul {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.pagination li a {
+  display: block;
+  padding: 0.3rem 1rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  color: var(--primary-blue1, #003399);
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination li a:hover {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+}
+
+.pagination .active a {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  font-weight: bold;
+  border-color: var(--primary-blue1);
+}
+
+.pagination li.active a {
+  background-color: var(--primary-blue1);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
 
 @media (min-width: 1024px) {
    .myinquiry-container {
@@ -214,7 +314,7 @@
   
   height: 300px; /* 원하는 만큼 높이 조절 가능 */
   resize: vertical; /* 사용자가 세로로 크기 조절 가능 */
- 
+  width: 100%;
   padding: 1rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -227,10 +327,10 @@
 .myinquiry-btn-area {
  
   padding: 0.5rem 0 1rem 0;
-  width: 90%;
+  width: 100%;
   background-color: #2E3E5A;
   border: none;
-  border-radius: 5px;
+  border-radius: 11px;
   display: flex;
   justify-content: center;
   

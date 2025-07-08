@@ -4,7 +4,7 @@
     flex-direction: column;
     /* 세로로 정렬 */
     margin-top: 1rem;
-
+    margin-bottom: 1rem;
 }
 
 /* 사이드 메뉴 */
@@ -64,53 +64,56 @@
 
 
 .mywritten-main-box {
-    display: flex;
-    
-    width: auto;
     
     
+    width: 100%;
+      display: flex;
+      flex-direction: column;
+    justify-content: center;
+   
 
 }
 
 
 /* 본문 내용 */
 .mywritten-table {
-   
-    
     border-collapse: collapse;
-
-
+    border-bottom: 1px solid var(--bg-subtle);
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem; 
+    text-align: left;  
 }
 
   .mywritten-table table {
-    font-size: 0.55rem;
+    font-size: 0.8rem;
     
   }
 
-.mywritten-table th, td {
+.mywritten-table th {
     
-    padding: 0.4rem; /* 셀 패딩 축소 */
+    padding: 0.4rem 0.4rem 0 0.4rem; /* 셀 패딩 축소 */
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; /* 줄바꿈 방지 */
+    
     
  
 }
 
 .mywritten-table td {
   background-color: white;
-    
+  padding-left: 0.4rem; 
+  
 }
 
-.mywritten-table td a {
-  background-color: white;
-  color: black;
+.mywritten-table th a {
+  color: var(--dark);
 }
+
 
 
 .mywritten-table th {
-  color: white;
-  background-color: #2E3E5A;
+ 
+  border-collapse: collapse;
   border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
   
 }
@@ -123,28 +126,59 @@
   border-bottom: 4px solid #fff; /* 행 사이 간격처럼 */
 }
 
-.title-col {
-  width: 70%;
-  text-align: left;
+.delete {
   
-}
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+  color: var(--bg-subtle);
 
-.nick-col {
-  width: 13%;
-  text-align: center;
-}
-
-.date-col {
-  width: 12%;
-  text-align: center;
-}
-
-.view-col {
-  width: 30%;
-  text-align: center;
 }
 
 
+
+/* 페이지네이션 */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination ul {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.pagination li a {
+  display: block;
+  padding: 0.3rem 1rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  color: var(--primary-blue1, #003399);
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination li a:hover {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+}
+
+.pagination .active a {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  font-weight: bold;
+  border-color: var(--primary-blue1);
+}
+
+.pagination li.active a {
+  background-color: var(--primary-blue1);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
 
 @media (min-width: 1024px) {
    .mywritten-container {
@@ -218,39 +252,55 @@
     justify-content: center;
 }
 
-.mywritten-table {
-  width: 45vw;
-  margin: 2rem auto;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-  
+
+
+
+
+
+
+/* 페이지네이션 */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.mywritten-table th,
-.mywritten-table td {
-  
-  padding: 0.5rem ;
-
-
+.pagination ul {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
 }
 
-
-
-.mywritten-table th {
-  
-  border-bottom: 10px solid #fff; /* 행 사이 간격처럼 */
+.pagination li a {
+  display: block;
+  padding: 0.3rem 1rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  color: var(--primary-blue1, #003399);
+  transition: all 0.2s ease-in-out;
 }
 
-.mywritten-table table {
-  font-size: 12px;
-  border-collapse: collapse;
-  
+.pagination li a:hover {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
 }
 
-.mywritten-table tbody tr {
-  border-bottom: 10px solid #fff; /* 행 사이 간격처럼 */
+.pagination .active a {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  font-weight: bold;
+  border-color: var(--primary-blue1);
 }
 
+.pagination li.active a {
+  background-color: var(--primary-blue1);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
 
 
 }
