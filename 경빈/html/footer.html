@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>돌림판</title>
+    <style>
+      /* 전체 배경과 기본 폰트 */
+      body {
+        background-color: #f4f6f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .event-container {
+        background-color: #f8f9fa;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+      }
+      .sub-text img {
+        width: 30px;
+      }
+      .hello {
+        color: blue;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 26px;
+        text-align: center;
+        color: #111;
+        line-height: 1;
+      }
+
+      .wheel-container {
+        position: relative;
+        margin: 50px auto;
+        width: 320px;
+        height: 320px;
+      }
+
+      .wheel {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 10px solid white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        background: conic-gradient(
+          #5d75ff 0deg 60deg,
+          #ffffff 60deg 120deg,
+          #5d75ff 120deg 180deg,
+          #ffffff 180deg 240deg,
+          #5d75ff 240deg 300deg,
+          #ffffff 300deg 360deg
+        );
+        position: relative;
+        transition: transform 5s ease-out;
+      }
+
+      .sector-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000;
+        pointer-events: none;
+      }
+
+      .sector-label img {
+        position: absolute;
+        top: 20px;
+        transform: rotate(0deg);
+        width: 50px;
+      }
+
+      .blue {
+        color: white;
+      }
+      .sector-label span {
+        position: absolute;
+        top: 15px;
+        transform: rotate(0deg);
+      }
+
+      .sector-label:nth-child(1) {
+        transform: rotate(30deg);
+      }
+      .sector-label:nth-child(2) {
+        transform: rotate(90deg);
+      }
+      .sector-label:nth-child(3) {
+        transform: rotate(150deg);
+      }
+      .sector-label:nth-child(4) {
+        transform: rotate(210deg);
+      }
+      .sector-label:nth-child(5) {
+        transform: rotate(270deg);
+      }
+      .sector-label:nth-child(6) {
+        transform: rotate(330deg);
+      }
+
+      .center-button {
+        position: absolute;
+        top: 52%;
+        left: 53%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background: white;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        font-weight: bold;
+        line-height: 80px;
+        cursor: pointer;
+        z-index: 100;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      .pointer {
+        position: absolute;
+        top: -20px;
+        left: calc(50% - 15px);
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-radius: 4px;
+        border-top: 30px solid #000;
+        z-index: 20;
+      }
+
+      /* 모달 팝업 스타일 */
+      .modal {
+        display: none; /* 기본 숨김 */
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 320px;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+      }
+
+      .close-btn {
+        color: #aaa;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close-btn:hover {
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="event-container">
+      <div class="sub-text">
+        <h1 class="hello">환영합니다~!</h1>
+        <h1>
+          <img src="/img/tagchsize.png" alt="로고이미지" />신규 가입
+          <img src="/img/tagchsize.png" alt="로고이미지" />
+        </h1>
+        <h1>단 한번의 기회!!</h1>
+      </div>
+      <div class="wheel-container">
+        <div class="pointer"></div>
+
+        <!-- START 버튼을 wheel 밖에 배치 -->
+        <div class="center-button" onclick="spin()">START</div>
+
+        <div class="wheel" id="wheel">
+          <div class="sector-label">
+            <span class="blue"
+              >10% 할인
+              <div><img src="/img/tagchsize.png" alt="로고이미지" /></div>
+            </span>
+          </div>
+          <div class="sector-label">
+            <span
+              >25% 할인
+              <div><img src="/img/tagchsize.png" alt="로고이미지" /></div>
+            </span>
+          </div>
+          <div class="sector-label">
+            <span class="blue"
+              >50% 할인
+              <div><img src="/img/tagchsize.png" alt="로고이미지" /></div>
+            </span>
+          </div>
+          <div class="sector-label">
+            <span
+              >75% 할인
+              <div><img src="/img/tagchsize.png" alt="로고이미지" /></div>
+            </span>
+          </div>
+          <div class="sector-label">
+            <span class="blue"
+              >100% 할인
+              <div><img src="/img/tagchsize.png" alt="로고이미지" /></div>
+            </span>
+          </div>
+          <div class="sector-label">
+            <span
+              >5% 할인
+              <div><img src="/img/tagchsize.png" alt="로고이미지" /></div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모달 팝업 -->
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <p id="resultText"></p>
+        <a href="#"><button
+          id="goCouponBtn"
+          style="
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #5d75ff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+          "
+        >
+          쿠폰함으로 가기
+        </button></a>
+      </div>
+    </div>
+
+    <script>
+      const wheel = document.getElementById("wheel");
+      const prizes = [
+        "10% 할인",
+        "25% 할인",
+        "50% 할인",
+        "75% 할인",
+        "100% 할인",
+        "5% 할인",
+      ];
+      let isSpinning = false;
+      let hasPlayed = false;
+      let deg = 0;
+
+      const modal = document.getElementById("resultModal");
+      const resultText = document.getElementById("resultText");
+      const closeBtn = document.querySelector(".close-btn");
+
+      function spin() {
+        if (isSpinning || hasPlayed) return;
+
+        isSpinning = true;
+        hasPlayed = true;
+
+        const sectorAngle = 360 / prizes.length;
+        const randomIndex = Math.floor(Math.random() * prizes.length);
+        const extraSpins = 360 * 5;
+        const targetDeg = 360 - randomIndex * sectorAngle - sectorAngle / 2;
+
+        deg += extraSpins + targetDeg;
+        wheel.style.transform = `rotate(${deg}deg)`;
+
+        const startBtn = document.querySelector(".center-button");
+        startBtn.style.background = "#ddd";
+        startBtn.style.color = "#aaa";
+        startBtn.style.cursor = "not-allowed";
+        startBtn.innerText = "!당첨!";
+
+        setTimeout(() => {
+          // alert 대신 모달에 결과 출력 후 보여주기
+          resultText.textContent = `축하합니다! ${prizes[randomIndex]} 당첨!`;
+          modal.style.display = "block";
+          isSpinning = false;
+        }, 5200);
+      }
+
+      // 모달 닫기 이벤트
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // 모달 바깥 클릭 시 닫기
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
