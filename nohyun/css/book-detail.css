@@ -1,0 +1,247 @@
+/* 📕 상세페이지 표지 이미지 */
+.series-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.book-cover {
+  position: relative;
+}
+.book-cover img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* 📖 기본 정보 묶음 */
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+.book-info h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.book-info p {
+  font-size: 0.95rem;
+  color: var(--sub2);
+}
+
+.button-group {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+}
+
+.book-description {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.book-description .btn-box {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-weight: 500;
+}
+
+.btn-box:hover {
+  background-color: var(--primary-blue2);
+  color: var(--white);
+}
+
+
+
+/* 📎 회차 목록 */
+.book-episode-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-episode-list .btn-rounded {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.episode-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--bg-subtle);
+}
+
+.thumb img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.episode-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.episode-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.sub-info {
+  margin-left: auto;
+  color: var(--sub2);
+}
+
+/* ⭐️ 별점 리뷰 */
+
+.rating-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--bg-subtle);
+}
+
+.rating-score {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sub {
+  font-size: 0.9rem;
+  color: var(--sub2);
+}
+
+.user-rating-stars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--bg-subtle);
+}
+
+.review-options {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.star {
+  color: var(--bg-subtle);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star.hover {
+  color: gold;
+}
+
+.star.active {
+  color: gold;
+}
+
+.review-item {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--bg-subtle);
+}
+
+.review-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.review-list {
+  padding: 0 0.5rem;
+}
+
+.user-rating-stars textarea {
+  width: 80%;
+  min-height: 4rem;
+  border-radius: 6px;
+}
+
+/* 📱 모바일 기준 레이아웃 - 상하정렬 */
+.book-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-cover,
+.book-info {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .book-detail {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .book-cover {
+    width: 40%;
+  }
+  .book-info {
+    width: 60%;
+  }
+
+  .book-description{
+    width: 100%;
+  }
+
+  .book-episode-list,
+  .review {
+    width: 100%;
+  }
+
+  .book-info h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark);
+  }
+
+  .book-info p {
+    font-size: 1.2rem;
+    color: var(--sub2);
+  }
+
+  .user-rating-stars {
+    align-items: center;
+  }
+
+  .book-description .btn-box {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .review {
+    padding: 0 1.5rem;
+  }
+
+}

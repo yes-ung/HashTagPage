@@ -21,7 +21,7 @@
 .mycase-sidebar {
     list-style: none;
     display: flex;
-    gap: 10rem;
+    gap: 2rem;
     padding-bottom: 1rem;
     justify-content: center;
 
@@ -33,7 +33,7 @@
 }
 
 .mycase-sidebar li a {
-    color: black;
+    color: var(--basic6-dark);
     text-decoration: none;
 }
 
@@ -46,11 +46,16 @@
 }
 
 .mycase-subtitle h4 {
-    border-bottom: 0.1rem solid var(--bg-subtle);
+    
     padding: 1rem 0 1rem 0;
 }
 
-
+.mycase-subtitlebox {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5rem;
+  border-bottom: 0.1rem solid var(--bg-subtle);
+}
 
 
 .mycase-main {
@@ -63,7 +68,7 @@
 .mycase-main-body {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem; 
+    gap: 2rem; 
     justify-content: center;
     padding-right: 1rem;
     padding-bottom: 2rem;
@@ -116,14 +121,14 @@
 
 /* 사이드 메뉴 */
 .mycase-sidebar-box {
-    width: 42.1%;
+    width: 12rem;
     border-bottom: none;
 }
 
 .mycase-sidebar {
     padding-left: 2rem;
     flex-direction: column;
-    gap: 2rem;
+    gap:2rem;
     
 }
 
@@ -135,7 +140,7 @@
 }
 
 .mycase-sidebar li a {
-    color: black;
+    color: var(--basic6-dark);
     text-decoration: none;
     
    
@@ -150,9 +155,28 @@
 }
 
 
+.mycase-main {
+    display: flex;
+ 
+    justify-content: flex-start;
+
+
+}
+
+
+.mycase-main-body {
+ 
+    gap: 3rem; 
+  
+}   
 
 
 
+.mycase-content {
+    flex: 1;
+    min-width: 0;
+    
+}
 
 
 .mycase-title {

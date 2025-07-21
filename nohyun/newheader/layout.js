@@ -24,7 +24,7 @@ function initHeaderInteractions(status) {
     novel: [
       "판타지/SF", "로맨스", "로맨스판타지", "무협", "공포/추리", "BL/GL"
     ],
-    community: ["자유게시판", "뜨거운논쟁", "작품추천"]
+    community: ["자유게시판", "찬반 토론", "추천"]
   };
 
   function renderAuthMenu() {

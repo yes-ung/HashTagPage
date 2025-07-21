@@ -1,0 +1,298 @@
+/* 모바일 */
+.hottalk-logo img {
+  display: none;
+  }
+.hottalk-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.freetalk-title h1 {
+  padding-top: 1.2rem;
+  
+}
+
+
+
+.hottalk-subject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hottalk-subjectbox {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+  gap: 1rem;
+  color: var(--primary-blue1);
+  font-weight: 700;
+  font-size:large;
+}
+
+.hottalk-subjectbox img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 100px;
+  box-shadow: 0 4px 12px rgba(0, 51, 153, 0.15),  
+              0 0 0.6rem rgba(0, 51, 153, 0.2);
+}
+
+.vote-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.option .percent {
+  font-weight: 600;
+}
+
+.option button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.option .blue {
+  background-color: #1e4aa1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option .red {
+  background-color: #d10000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 댓글 입력창 */
+
+.comment-area {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+
+.comment-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-box input {
+  flex: 1;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.comment-box button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: var(--primary-blue1, #003399);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 댓글 목록 */
+
+.user-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0.5rem;
+  padding-top: 1rem;
+}
+
+.comments-repeat {
+  border-bottom: 1px solid #eee;
+}
+
+.comment-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-nickname p {
+  margin: 0;
+}
+
+.vote-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.vote-buttons .vote {
+  min-width: 3rem;
+  padding: 0.1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  background: var(--white);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-text {
+  width: 70%;
+}
+
+.comment-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.commenteditor button {
+  min-width: 3rem;
+  padding: 0.1rem;
+  text-align: center;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* 대댓 입력창 */
+.comment-reply {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.comment-reply input {
+  flex: 1;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-reply button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: var(--primary-blue1, #003399);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reply-list {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-left: 0.5rem;
+}
+
+.reply-item {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+
+/* 더보기 버튼 */
+.comment-more-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+#commentMoreBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .community-container{
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .hottalk-side {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .hottalk-title h1 {
+    padding-top: 1.3rem;
+  }
+
+  .hottalk-logo {
+    position : sticky;
+    top: 50vh;
+    z-index: 1;
+  }
+
+  .hottalk-logo img {
+    display: block;
+    width: 120px;
+    height: auto;
+  }
+
+  .hottalk-divider{
+    width: 1px;
+    background-color: var(--bg-subtle);
+    height: auto;
+    margin: 1rem 1rem;
+  }
+
+  .hottalk-content {
+    width: 79%;
+  }
+
+  .hottalk-subject {
+    margin-top: 3rem;
+  }
+  
+}

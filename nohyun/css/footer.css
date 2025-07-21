@@ -5,7 +5,7 @@ footer {
 }
 
 .main-footer {
-  max-width: 1024px;
+  /* max-width: 1024px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -41,9 +41,9 @@ footer {
 
 /* TODO: 태블릿 */
 @media screen and (min-width: 768px) {
-  .page {
+  /* .page {
     width: 80vw;
-  }
+  } */
 
   .main-footer {
     flex-direction: row;
@@ -62,7 +62,7 @@ footer {
 
 /* TODO: pc */
 @media screen and (min-width: 1024px) {
-  .page {
+  /* .page {
     width: 60vw;
-  }
+  } */
 }

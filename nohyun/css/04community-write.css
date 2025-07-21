@@ -1,0 +1,382 @@
+.write-title-box {
+  width: 100%;
+
+  align-items: center; /* 수직 정렬 */
+  justify-content: space-between;
+  
+}
+
+.write-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 1;
+  gap: 0.5rem;
+  min-width: 0;
+  font-weight: bold;
+  flex-wrap: wrap;
+  padding-top: 0.75rem;
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-info {
+  display: flex;
+  flex-direction: row;
+ 
+  gap: 0.2em;
+  font-size: 0.8rem;
+
+  flex-shrink: 0;
+}
+
+.date{
+  display: flex;
+  justify-content: flex-end;
+
+ 
+}
+
+.write-title-header {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.recommended-listback {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+#listbackBtn{
+
+  display: flex;
+  justify-content: center;
+  color:#ccc;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 11px;
+  cursor: pointer;
+ 
+}
+
+#listbackBtn:hover {
+  color: white;
+  background-color: var(--primary-blue1, #003399); /* 호버 시 배경색 */
+  border-color: var(--primary-blue1, #003399);
+}
+
+
+
+.write-content{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+  gap: 1rem;
+}
+
+.write-img img{
+  width: 160px;
+  height: 210px;
+  margin-top: 0.2rem;
+}
+
+.write-img-body{
+
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 0.7rem;
+}
+
+.tags span {
+  background-color: #e0e0e0;
+  padding: 0.5rem;
+  border-radius: 15px;
+  font-size: 0.8em;
+}
+.stats {
+  margin: 10px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.quote {
+  padding: 1rem;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 11px;
+  color: #333;
+}
+
+.button-bar {
+  position: relative;
+  margin: 30px 0;
+  padding-bottom: 1rem;
+}
+
+.vote-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+
+.modify-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modify {
+  display: flex;
+  justify-content: center;
+  color: #ccc;
+  border: 1px solid #ccc;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 11px;
+}
+
+.modify:hover {
+  color: white;
+  background-color: var(--primary-blue1, #003399);
+  border-color: var(--primary-blue1, #003399);
+}
+
+
+.likes {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+.likes button {
+  font-size: 0.9rem;
+
+}
+.webtoon_site {
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+/* 댓글 입력창 */
+
+.comment-area {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+
+.comment-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-box input {
+  flex: 1;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.comment-box button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color:var(--primary-blue1, #003399);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 댓글 목록 */
+
+.user-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.comments-repeat {
+  border-bottom: 1px solid #eee;
+}
+
+.comment-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-nickname p {
+  margin: 0;
+}
+
+.vote-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.vote-buttons .vote {
+  min-width: 3rem;
+  padding: 0.1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  background: var(--white);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-text {
+  width: 70%;
+}
+
+.comment-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.commenteditor button {
+  min-width: 3rem;
+  padding: 0.1rem;
+  text-align: center;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* 대댓 입력창 */
+.comment-reply {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.comment-reply input {
+  flex: 1;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment-reply button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 더보기 버튼 */
+.comment-more-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#commentMoreBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+.write-title-box{
+
+  display: flex;
+flex-direction: row;
+
+
+}
+
+.write-title{
+width: 100%;
+display: flex;
+flex-direction: row;
+
+font-weight: bold;
+
+}
+.title-info{
+
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+gap: 0.5rem;
+font-size: 0.9rem;
+}
+
+.write-title-header {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+}
+
+.write-title-box{
+  padding-top: none;
+}
+
+.recommended-listback {
+padding-top: 1rem;
+}
+
+}

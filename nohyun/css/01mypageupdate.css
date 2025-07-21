@@ -63,7 +63,7 @@
 
 /* 프로필 이미지 박스 */
 .profile-img {
-    
+    width: 200px;
     text-align: left;
  
 }
@@ -78,7 +78,7 @@
 }
 
 .profile-img-button {
-    width: 46vw;
+    
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: flex-end;
@@ -94,7 +94,7 @@
   width: 3rem;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+ 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   
 }
@@ -129,8 +129,22 @@
 }
 
 
+/* 로그아웃 버튼 모바일에서만 적용 */
+.logout{
+     height: 50px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;         /* 플렉스 활성화 */
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* 세로 중앙 */
+    background-color: #2E3E5A;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 11px;
+}
 
-
+.logout h5 a {
+    color: white;
+}
 
 /* 회원탈퇴 버튼 */
 .bye {
@@ -221,12 +235,6 @@
 
 
 
-.profile-img-button {
-  width: 10.5vw;
-  display: flex;
-  
-  justify-content: flex-end;
-}
 
 .mypage-update {
   text-align: left; /* 왼쪽 정렬 */
@@ -247,6 +255,11 @@
 
     margin-top: 1rem
     
+}
+
+
+.logout{
+    display: none;
 }
 
 
