@@ -1,0 +1,394 @@
+
+
+.recommended-logo img {
+  display: none;
+  }
+.recommended-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.recommended-title h1 {
+  padding-top: 1.2rem;
+  
+}
+
+.recommended-subject {
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+
+
+/* 게시판 리스트 */
+.recommended-list {
+ 
+  
+  color: var(--dark);
+  font-size: 0.8rem;
+  
+  
+}
+
+
+/* 글쓰기 버튼 */
+.recommended-btn {
+  
+  display: flex;
+
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+
+.written-btn {
+  background-color: var(--primary-blue1, #003399);
+  border-radius: 11px;
+  color: white;
+  
+  
+}
+
+.written-btn button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
+/* 게시판 서치바 */
+.recommended-search {
+  
+  display: flex;
+  gap: 0.5rem;
+  
+}
+
+
+.recommended-search input {
+  width: 50%;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+   border-radius: 11px;
+   border: 1px solid #ccc;
+}
+
+.search-select {
+ 
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+   border: 1px solid var(--primary-blue1, #003399);
+    border-radius: 11px;
+  color: var(--primary-blue1, #003399);
+  cursor: pointer;
+
+}
+
+
+.array-btn {
+  display: flex;
+  justify-content: flex-end;
+  border: none;
+}
+
+
+.array-select {
+ 
+  padding: 0.3rem 0.2rem;
+  font-size: 0.8rem;
+   border: none;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.post-box {
+  padding-top: 0.4rem;
+}
+
+
+.post-row {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  gap: 0.5rem; /* 이미지와 텍스트 사이 여백 */
+  align-items: center; /* 위쪽 정렬 */
+  justify-content: center;
+  border-top: 1px solid var(--bg-subtle); 
+}
+
+
+.post-row a{
+  color: var(--dark);
+
+}
+
+
+/* 이미지 */
+.recommended-list-img {
+  
+  flex-shrink: 0;
+  width: 60px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.recommended-list-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  
+}
+
+/* 텍스트 전체 감싸는 박스 추가 필요 */
+.recommended-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+}
+
+/* 상단: 제목 + 댓글 */
+.top-row {
+ 
+  
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+  
+}
+
+.list-title {
+  
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-comment {
+  
+  display: flex;
+  margin-left: 1rem;
+  white-space: nowrap;
+  
+}
+
+/* 중간 : 닉네임 */
+.list-nick {
+  padding: 0.2rem 0 0 0;
+}
+
+/* 하단: 날짜 + 조회수 + 좋아요 */
+.bottom-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.65rem;
+  padding-top: 0.1rem;
+}
+
+.bottom-row > div {
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+/* 페이지네이션 */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pagination ul {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.pagination li a {
+  display: block;
+  padding: 0.3rem 1rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  color: var(--primary-blue1, #003399);
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination li a:hover {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+}
+
+.pagination .active a {
+  background-color: var(--primary-blue1, #003399);
+  color: white;
+  font-weight: bold;
+  border-color: var(--primary-blue1);
+}
+
+.pagination li.active a {
+  background-color: var(--primary-blue1);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* pc버전 */
+/* TODO: pc */
+@media screen and (min-width: 1024px) {
+   .recommended-logo img {
+    display: block;
+    width: 120px;
+    height: auto;
+    
+  }
+
+
+  .recommended-logo {
+  display: flex;
+  justify-content: center;
+    position: sticky; 
+  top: 50vh;
+  z-index: 1;  
+}
+
+ .community-container {
+  display: flex;
+  flex-direction: row;
+    
+}
+
+
+
+
+
+
+/* 사이드 메뉴 */
+.recommended-side {
+  width: 20%;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  
+}
+
+
+.recommended-divider {
+  width: 1px;
+    background-color: var(--bg-subtle);
+    height: auto;
+    margin: 1rem 1rem;
+}
+
+
+
+.recommended-content {
+   width: 79%; 
+}
+
+.recommended-title h1 {
+  padding-top: 1.3rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+/* 본문 내용 */
+.recommended-subject-body {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}   
+
+.recommended-list {
+  width: 45vw;
+  color: var(--dark);
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+}
+
+.recommended-search input {
+  
+  padding: 0.4rem;
+  font-size: 0.9rem;
+   border-radius: 11px;
+   border: 1px solid #ccc;
+}
+
+.recommended-search {
+  width: 80%;
+  display: flex;
+
+  
+}
+
+
+/* 상단: 제목 + 댓글 */
+.top-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.list-title {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-comment {
+  display: flex;
+  margin-left: 1rem;
+  white-space: nowrap;
+  
+}
+
+/* 중간 : 닉네임 */
+.list-nick {
+  padding: 0.2rem 0 0 0;
+}
+
+/* 하단: 날짜 + 조회수 + 좋아요 */
+.bottom-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.65rem;
+  
+}
+
+.bottom-row > div {
+  white-space: nowrap;
+}
+
+
+
+
+
+}

@@ -71,8 +71,6 @@
 .myPurchase-main-box {
     width: auto;
     display: flex;
-
-    padding-right: 0.3rem;
     padding-top: 1rem;
     flex-direction: column;
 }
@@ -86,7 +84,7 @@
     border-radius: 11px;
 }
 
-.title-col a , .title2-col a {
+.title-col a , .title2-col a , .title3-col a {
     color: white;
 }
 
@@ -94,12 +92,38 @@
 .cash-list {
 
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     padding-top: 1rem;
-    padding-left: 1rem;
+   
     line-height: 3;
 
 }
+.Charging-history {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+  list-style: none;
+  
+}
+
+.Charging-history li {
+  text-align: center;
+}
+
+.Usage-history {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  padding-right: 1rem;
+  list-style: none;
+  
+}
+
+.Usage-history li {
+  text-align: center;
+}
+
 
 
 /* 페이지네이션 */
@@ -219,10 +243,11 @@
 
 
     .cash-list {
-        padding-left: 2rem;
+        padding-left: 1.5rem;
         line-height: 3;
 
     }
+
 
 
 
